@@ -1,71 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
-            max-width: 500px;
-        }
-        h1 { color: #333; margin-bottom: 20px; }
-        p { color: #666; margin-bottom: 20px; line-height: 1.6; }
-        .btn {
-            background: #667eea;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn:hover { background: #764ba2; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMNET IT SYSTEMS | IT Support Solutions & Procurement</title>
+  <meta name="description" content="OMNET IT SYSTEMS provides reliable third-party IT support, infrastructure, cloud, security, and IT hardware procurement services." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f8f9fa;
+    }
+    header {
+      background: #0d47a1;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      max-width: 900px;
+      margin: 15px auto 0;
+      font-size: 1.05rem;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+    .services, .why {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+    }
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+    .cta {
+      background: #e3f2fd;
+      border-left: 5px solid #0d47a1;
+      padding: 25px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Website</h1>
-        <p>This is my free website hosted on GitHub Pages!</p>
-        <a href="mailto:your@email.com" class="btn">Contact Me</a>
+
+  <header>
+    <h1>OMNET IT SYSTEMS</h1>
+    <p>
+      IT Support Solutions | Procurement | IT Hardware & Networking
+      <br />
+      Reliable Third-Party IT Support – Your One-Stop Partner for All IT Needs
+    </p>
+  </header>
+
+  <section>
+    <h2>Transform Your Business with OMNET IT SYSTEMS</h2>
+    <p>
+      Our comprehensive IT solutions help businesses streamline operations,
+      enhance security, and reduce operational costs through reliable,
+      scalable, and future-ready technology services.
+    </p>
+  </section>
+
+  <section>
+    <h2>What We Excel At</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Network Design & Implementation</h3>
+        <p>LAN/WAN, Wi‑Fi solutions, firewall and security infrastructure.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud & On‑Prem Infrastructure</h3>
+        <p>End‑to‑end design, deployment, and support for hybrid IT environments.</p>
+      </div>
+      <div class="card">
+        <h3>Collaboration Tools</h3>
+        <p>Microsoft 365, Google Workspace, Zoho – setup, migration, and support.</p>
+      </div>
+      <div class="card">
+        <h3>Security‑First Approach</h3>
+        <p>SSO, MFA, MDM, endpoint protection, access control & CCTV solutions.</p>
+      </div>
+      <div class="card">
+        <h3>ITIL Service Management</h3>
+        <p>Professional incident, problem, and change management services.</p>
+      </div>
+      <div class="card">
+        <h3>IT Hardware Procurement</h3>
+        <p>Servers, networking equipment, desktops, laptops, and accessories.</p>
+      </div>
     </div>
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <div class="why">
+      <div class="card">24/7 Managed IT Services</div>
+      <div class="card">IT Cost Optimization & Consulting</div>
+      <div class="card">Skilled IT Staffing Solutions</div>
+      <div class="card">Complete Deployment & Ongoing Support</div>
+      <div class="card">Strategic IT Procurement Services</div>
+      <div class="card">Network Infrastructure Excellence</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cta">
+      <h2>Ready to Optimize Your IT Infrastructure?</h2>
+      <p>
+        Let’s connect and discuss how OMNET IT SYSTEMS can transform your
+        business operations with reliable, secure, and cost‑effective IT
+        solutions.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Get Started</strong></p>
+    <p>General Inquiries: <a href="mailto:info@omnetitsystem.com">info@omnetitsystem.com</a></p>
+    <p>IT Support: <a href="mailto:support@omnetitsystem.com">support@omnetitsystem.com</a></p>
+    <p>IT Hardware Procurement: <a href="mailto:info@balajics.in">info@balajics.in</a></p>
+    <p>&copy; 2026 OMNET IT SYSTEMS. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
-```
-
-5. Click **"Commit changes"**
-
----
-
-### Step 2: Enable GitHub Pages
-
-1. Go to your repo: https://github.com/Prashant-LetsLearn/omnet
-2. Click **"Settings"** (top menu)
-3. Scroll down to **"Pages"** (left sidebar)
-4. Under **"Source"**, select:
-   - Branch: **main**
-   - Folder: **/ (root)**
-5. Click **"Save"**
-
----
-
-### Step 3: Wait 1-2 minutes
-
-Your website will be live at:
-```
-https://prashant-letslearn.github.io/omnet/
