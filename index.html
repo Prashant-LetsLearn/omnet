@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OMNET IT SYSTEM - Enterprise IT Solutions & Managed Services Partner in Noida, Delhi NCR, Gurgaon. 24x7 support, cloud solutions, cybersecurity.">
-    <meta name="keywords" content="IT services Noida, managed IT services Delhi NCR, cloud solutions Gurgaon, cybersecurity, enterprise IT">
+    <meta name="description" content="OMNET IT SYSTEM - Enterprise IT Solutions & Managed Services Partner in Noida, Delhi NCR, Gurgaon. 24x7 support, cloud solutions, cybersecurity, hardware sales & AMC services.">
+    <meta name="keywords" content="IT services Noida, managed IT services Delhi NCR, cloud solutions Gurgaon, cybersecurity, enterprise IT, Dell HP Lenovo, CCTV, office relocation">
     <title>OMNET IT SYSTEM | Enterprise IT Solutions & Managed Services Partner</title>
     <style>
         * {
@@ -23,7 +23,10 @@
             --text-dim: #a0a4b8;
             --accent: #6366f1;
             --success: #10b981;
-            --warning: #f59e0b;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -58,6 +61,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
 
         .logo {
@@ -67,6 +71,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -86,6 +91,26 @@
             color: var(--secondary);
         }
 
+        .nav-contact {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-contact a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .nav-contact a:hover {
+            color: var(--secondary);
+        }
+
         .nav-cta {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             color: white;
@@ -94,11 +119,22 @@
             text-decoration: none;
             font-weight: 600;
             transition: transform 0.3s, box-shadow 0.3s;
+            white-space: nowrap;
         }
 
         .nav-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 102, 255, 0.4);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         /* Hero Section */
@@ -278,10 +314,47 @@
             margin: 0 auto;
         }
 
+        /* Feature Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, var(--dark-light) 0%, rgba(26, 31, 58, 0.5) 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
@@ -336,7 +409,6 @@
 
         .service-list {
             list-style: none;
-            margin-top: 1rem;
         }
 
         .service-list li {
@@ -355,18 +427,17 @@
             font-weight: bold;
         }
 
-        /* Partners Section */
+        /* Partners Grid */
         .partners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
         }
 
         .partner-card {
             background: linear-gradient(135deg, var(--dark-light) 0%, rgba(26, 31, 58, 0.5) 100%);
-            padding: 2rem;
-            border-radius: 16px;
+            padding: 1.5rem;
+            border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
             transition: all 0.3s;
@@ -378,23 +449,18 @@
             box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
         }
 
-        .partner-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
         .partner-card h4 {
             color: var(--text);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
         }
 
         .partner-card p {
             color: var(--text-dim);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        /* Industry Solutions */
+        /* Industries Grid */
         .industries-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -422,94 +488,6 @@
         }
 
         .industry-card p {
-            color: var(--text-dim);
-            line-height: 1.6;
-        }
-
-        /* Technologies Section */
-        .tech-section {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 6rem 2rem;
-            margin: 4rem 0;
-        }
-
-        .tech-categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .tech-category {
-            background: linear-gradient(135deg, var(--dark-light) 0%, rgba(26, 31, 58, 0.5) 100%);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .tech-category h3 {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid rgba(0, 212, 255, 0.2);
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .tech-tag {
-            background: rgba(99, 102, 241, 0.2);
-            color: var(--text);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            transition: all 0.3s;
-        }
-
-        .tech-tag:hover {
-            background: rgba(99, 102, 241, 0.3);
-            transform: translateY(-2px);
-        }
-
-        /* Why Choose Us */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: linear-gradient(135deg, var(--dark-light) 0%, rgba(26, 31, 58, 0.5) 100%);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--secondary);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--text);
-        }
-
-        .feature-card p {
             color: var(--text-dim);
             line-height: 1.6;
         }
@@ -545,6 +523,7 @@
         .contact-item-icon {
             font-size: 1.5rem;
             color: var(--primary);
+            min-width: 30px;
         }
 
         .contact-item h4 {
@@ -677,6 +656,22 @@
         .footer-text {
             color: var(--text-dim);
             line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-dim);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
         }
 
         .footer-bottom {
@@ -690,11 +685,21 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .nav-links {
                 display: none;
             }
 
+            .nav-contact {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -713,9 +718,7 @@
             }
 
             .services-grid,
-            .industries-grid,
-            .partners-grid,
-            .tech-categories {
+            .industries-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -727,20 +730,30 @@
             .footer-content {
                 grid-template-columns: 1fr;
             }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
         }
 
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
+        /* Scroll Animation */
         @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
         }
     </style>
 </head>
@@ -756,7 +769,12 @@
                 <li><a href="#industries">Industries</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="nav-contact">
+                <a href="tel:+919717270865">📞 +91 9717270865</a>
+                <a href="mailto:hello@omnetitsystem.com">✉️ hello@omnetitsystem.com</a>
+            </div>
             <a href="#contact" class="nav-cta">Get Started</a>
+            <button class="mobile-menu-btn">☰</button>
         </div>
     </nav>
 
@@ -766,7 +784,7 @@
             <div class="hero-tag">🚀 Noida | Delhi NCR | Gurgaon</div>
             <h1>Enterprise IT Solutions & Managed Services Partner</h1>
             <p class="hero-subtitle">
-                Helping businesses secure, optimize, and scale their IT environments across cloud, on-premises, and hybrid infrastructures with joy and efficiency.
+                🌟 Let's connect to discuss how OMNET IT System can streamline your IT operations and enhance security! We deliver end-to-end IT solutions across cloud, on-premises, and hybrid infrastructures.
             </p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">Schedule Free Consultation</a>
@@ -808,37 +826,37 @@
         </div>
 
         <div class="features-grid">
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">🔄</div>
                 <h3>24×7 Managed Services</h3>
                 <p>Round-the-clock monitoring and proactive support to keep your systems running smoothly with minimal downtime</p>
             </div>
 
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">📋</div>
                 <h3>SLA-Driven Support</h3>
                 <p>Guaranteed response times with ticket, email, and call support aligned to ITIL best practices</p>
             </div>
 
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">🔒</div>
                 <h3>Enterprise Security</h3>
                 <p>Comprehensive security and compliance solutions including HIPAA, ISO 27001, NIST, and GDPR</p>
             </div>
 
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">💰</div>
                 <h3>Cost Optimization</h3>
                 <p>Strategic consulting to maximize ROI and optimize your IT infrastructure investments</p>
             </div>
 
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">👨‍💼</div>
                 <h3>Certified Experts</h3>
                 <p>Experienced professionals with certifications in cloud, security, and infrastructure management</p>
             </div>
 
-            <div class="feature-card fade-in">
+            <div class="feature-card">
                 <div class="feature-icon">⚡</div>
                 <h3>End-to-End Support</h3>
                 <p>Complete lifecycle management from deployment to migration and ongoing maintenance</p>
@@ -850,54 +868,55 @@
     <section id="services">
         <div class="section-header">
             <div class="section-tag">Our Services</div>
-            <h2 class="section-title">Comprehensive IT Solutions for Modern Businesses</h2>
+            <h2 class="section-title">Comprehensive IT Solutions</h2>
             <p class="section-subtitle">
                 Full-spectrum services designed to drive efficiency, security, and growth
             </p>
         </div>
 
         <div class="services-grid">
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-icon">🤖</div>
                 <h3>Artificial Intelligence</h3>
                 <p>Leverage AI to boost productivity and innovation</p>
                 <ul class="service-list">
                     <li>Gen AI strategy and implementation</li>
-                    <li>AI infrastructure design and optimization</li>
-                    <li>Custom AI application development</li>
-                    <li>AI security and monitoring solutions</li>
+                    <li>AI infrastructure design</li>
+                    <li>Custom AI applications</li>
+                    <li>AI security and monitoring</li>
                 </ul>
             </div>
 
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-icon">☁️</div>
                 <h3>Cloud Solutions</h3>
-                <p>Modernize infrastructure with scalable cloud platforms</p>
+                <p>Modernize with scalable cloud platforms</p>
                 <ul class="service-list">
-                    <li>AWS, Azure, GCP administration and migration</li>
-                    <li>Hybrid and multi-cloud architecture</li>
-                    <li>Cloud security and compliance</li>
-                    <li>Cost optimization and managed services</li>
+                    <li>AWS, Azure, GCP migration</li>
+                    <li>Hybrid and multi-cloud</li>
+                    <li>Cloud security & compliance</li>
+                    <li>Cost optimization</li>
                 </ul>
             </div>
 
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-icon">📊</div>
                 <h3>Data Management</h3>
-                <p>Secure, manage, and monetize your business data</p>
+                <p>Secure and monetize your data</p>
                 <ul class="service-list">
-                    <li>Enterprise data warehouse solutions</li>
-                    <li>Data migration and lake modernization</li>
-                    <li>Data governance and security</li>
-                    <li>Analytics and business intelligence</li>
+                    <li>Data warehouse solutions</li>
+                    <li>Data migration & modernization</li>
+                    <li>Data governance</li>
+                    <li>Analytics & BI</li>
                 </ul>
             </div>
 
-            <div class="service-card fade-in">
+            <div class="service-card">
                 <div class="service-icon">💼</div>
                 <h3>Digital Workplace</h3>
-                <p>Drive collaboration and productivity across teams</p>
+                <p>Drive collaboration and productivity</p>
                 <ul class="service-list">
-                    <li>Google Workspace and Microsoft 365</li>
-                    <li>Device management (Windows, Mac, Mobile)</li>
-                    <li>
+                    <li>Google Workspace & M365</li>
+                    <li>Device management (MDM)</li>
+                    <li>Workflow automation</li>
+                    <li>Training & support</li>
