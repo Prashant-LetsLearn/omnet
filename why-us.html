@@ -318,6 +318,101 @@
         margin: 0 auto;
       }
 
+      /* Why Choose Section */
+      .why-choose-omnet {
+        padding: 40px 0;
+      }
+
+      .why-choose-omnet .section-header {
+        margin-bottom: 40px;
+      }
+
+      .why-choose-omnet .section-header h1 {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 16px;
+      }
+
+      .why-choose-omnet .section-header h1 span {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .why-choose-omnet .section-header p {
+        font-size: 18px;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .why-choose-omnet .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .why-choose-omnet .feature-box {
+        background: var(--bg-white);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 30px;
+        transition: all 0.3s ease;
+      }
+
+      .why-choose-omnet .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary);
+      }
+
+      .why-choose-omnet .feature-box h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 12px;
+      }
+
+      .why-choose-omnet .feature-box p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .why-choose-footer {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px 0;
+      }
+
+      .why-choose-footer p {
+        font-size: 16px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+      }
+
+      .cta-text {
+        font-size: 18px;
+        color: var(--text-primary);
+        max-width: 700px;
+        margin: 20px auto 0;
+      }
+
+      .cta-text strong {
+        color: var(--primary);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .mt-4 {
+        margin-top: 24px;
+      }
+
       /* Benefits Section */
       .benefits-section {
         padding: 100px 0;
@@ -558,7 +653,7 @@
         padding: 100px 0;
       }
 
-      .features-grid {
+      .features-section .features-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
@@ -1016,7 +1111,8 @@
 
       /* Responsive */
       @media (max-width: 1024px) {
-        .benefits-grid {
+        .benefits-grid,
+        .why-choose-omnet .features-grid {
           grid-template-columns: repeat(2, 1fr);
         }
 
@@ -1028,7 +1124,7 @@
           grid-template-columns: 1fr;
         }
 
-        .features-grid {
+        .features-section .features-grid {
           grid-template-columns: 1fr;
           gap: 40px;
         }
@@ -1060,7 +1156,8 @@
           font-size: 32px;
         }
 
-        .benefits-grid {
+        .benefits-grid,
+        .why-choose-omnet .features-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1163,101 +1260,55 @@
             <i class="ri-arrow-right-s-line"></i>
             <span>Why Choose Us</span>
           </div>
-        <div class="why-choose-omnet section-padding">
-  <div class="container">
-    <div class="section-header text-center">
-      <h1>
-        Why Choose <span>OMNET IT SYSTEM</span> for Third-Party Maintenance (TPM)?
-      </h1>
-      <p>
-        Discover what makes us the preferred IT partner for enterprises seeking
-        reliable, cost-effective, and scalable IT maintenance services.
-      </p>
-    </div>
 
-    <div class="features-grid">
-      <div class="feature-box">
-        <h3>Nationwide Coverage, Always On</h3>
-        <p>
-          Pan-India 24×7×365 support ensuring uninterrupted operations across
-          data centres, corporate offices, and branch locations.
-        </p>
-      </div>
+          <!-- Why Choose OMNET Section -->
+          <div class="why-choose-omnet">
+            <div class="section-header text-center">
+              <h1>Why Choose <span>OMNET IT SYSTEM</span> for Third-Party Maintenance (TPM)?</h1>
+              <p>Discover what makes us the preferred IT partner for enterprises seeking reliable, cost-effective, and scalable IT maintenance services.</p>
+            </div>
 
-      <div class="feature-box">
-        <h3>Comprehensive Asset Coverage</h3>
-        <p>
-          A single TPM contract covering enterprise infrastructure and end-user
-          assets—simplifying support, billing, and operational management.
-        </p>
-      </div>
+            <div class="features-grid">
+              <div class="feature-box">
+                <h3>Nationwide Coverage, Always On</h3>
+                <p>Pan-India 24×7×365 support ensuring uninterrupted operations across data centres, corporate offices, and branch locations.</p>
+              </div>
 
-      <div class="feature-box">
-        <h3>Multi-Vendor Expertise</h3>
-        <p>
-          Certified expertise across servers, storage, networking, and
-          peripherals, removing dependency on multiple OEMs and contracts.
-        </p>
-      </div>
+              <div class="feature-box">
+                <h3>Comprehensive Asset Coverage</h3>
+                <p>A single TPM contract covering enterprise infrastructure and end-user assets—simplifying support, billing, and operational management.</p>
+              </div>
 
-      <div class="feature-box">
-        <h3>Customized SLA Models</h3>
-        <p>
-          Flexible response times and service coverage aligned with your
-          business-critical workloads and uptime requirements.
-        </p>
-      </div>
+              <div class="feature-box">
+                <h3>Multi-Vendor Expertise</h3>
+                <p>Certified expertise across servers, storage, networking, and peripherals, removing dependency on multiple OEMs and contracts.</p>
+              </div>
 
-      <div class="feature-box">
-        <h3>EOSL Support &amp; Sustainable IT</h3>
-        <p>
-          Extend the lifecycle of end-of-support assets, reduce maintenance
-          costs, and minimize e-waste through responsible IT practices.
-        </p>
-      </div>
+              <div class="feature-box">
+                <h3>Customized SLA Models</h3>
+                <p>Flexible response times and service coverage aligned with your business-critical workloads and uptime requirements.</p>
+              </div>
 
-      <div class="feature-box">
-        <h3>Expert Technical Team</h3>
-        <p>
-          Highly skilled field and remote engineers dedicated to uptime, rapid
-          resolution, and service continuity.
-        </p>
-      </div>
-    </div>
+              <div class="feature-box">
+                <h3>EOSL Support &amp; Sustainable IT</h3>
+                <p>Extend the lifecycle of end-of-support assets, reduce maintenance costs, and minimize e-waste through responsible IT practices.</p>
+              </div>
 
-    <div class="why-choose-footer text-center">
-      <p>
-  </div>
-    </div>
-           </div>
-           </div>
-         </div>
-     <div class="why-choose-footer text-center mt-4">
-  <p>
-    When IT failures occur, the impact extends beyond systems—it affects
-    people, productivity, and business momentum. Omnet’s proactive support,
-    rapid response, and accountability ensure faster recovery with minimal
-    disruption.
-  </p>
-</div>
+              <div class="feature-box">
+                <h3>Expert Technical Team</h3>
+                <p>Highly skilled field and remote engineers dedicated to uptime, rapid resolution, and service continuity.</p>
+              </div>
+            </div>
 
-</div>
-    </div>
-           </div>
-           </div>
-         </div>
-       </div>
+            <div class="why-choose-footer text-center">
+              <p>When IT failures occur, the impact extends beyond systems—it affects people, productivity, and business momentum. Omnet's proactive support, rapid response, and accountability ensure faster recovery with minimal disruption.</p>
+            </div>
 
-          
-      <p class="cta-text">
-        If you are looking to <strong>reduce maintenance costs</strong>,
-        <strong>simplify vendor management</strong>, and
-        <strong>maximize infrastructure reliability</strong>, Omnet is ready to
-        be your trusted TPM partner.
-      </p>
-    </div>
-  </div>
-</div>     
+            <p class="cta-text text-center">
+              If you are looking to <strong>reduce maintenance costs</strong>, <strong>simplify vendor management</strong>, and <strong>maximize infrastructure reliability</strong>, Omnet is ready to be your trusted TPM partner.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
