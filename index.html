@@ -245,6 +245,32 @@
         color: var(--primary);
       }
 
+      /* Social Media Icons in Header */
+      .header-social {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .header-social a {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: var(--bg-light);
+        color: var(--text-secondary);
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .header-social a:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+      }
+
       .mobile-menu-btn {
         display: none;
         background: none;
@@ -664,7 +690,7 @@
       }
 
       @media (max-width: 768px) {
-        .nav-links, .nav-cta .btn, .nav-phone {
+        .nav-links, .nav-cta .btn, .nav-phone, .header-social {
           display: none;
         }
 
@@ -745,6 +771,20 @@
                 <i class="ri-phone-fill"></i>
                 +91-97172-70865
               </a>
+              
+              <!-- Social Media Icons -->
+              <div class="header-social">
+                <a href="https://facebook.com/OMNETITSYSTEMS" target="_blank" title="Facebook">
+                  <i class="ri-facebook-fill"></i>
+                </a>
+                <a href="https://linkedin.com/company/omnet-it-system" target="_blank" title="LinkedIn">
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a href="https://twitter.com/omnetit" target="_blank" title="Twitter/X">
+                  <i class="ri-twitter-x-fill"></i>
+                </a>
+              </div>
+              
               <a href="contact.html" class="btn btn-primary">Get Started</a>
             </div>
           </nav>
@@ -763,6 +803,11 @@
         <a href="why-us.html">Why Us</a>
         <a href="contact.html">Contact</a>
         <a href="tel:+919717270865">Call: +91-97172-70865</a>
+        <div style="display: flex; gap: 16px; padding: 16px 0; justify-content: center;">
+          <a href="https://facebook.com/OMNETITSYSTEMS" target="_blank" style="color: var(--primary);"><i class="ri-facebook-fill" style="font-size: 20px;"></i></a>
+          <a href="https://linkedin.com/company/omnet-it-system" target="_blank" style="color: var(--primary);"><i class="ri-linkedin-fill" style="font-size: 20px;"></i></a>
+          <a href="https://twitter.com/omnetit" target="_blank" style="color: var(--primary);"><i class="ri-twitter-x-fill" style="font-size: 20px;"></i></a>
+        </div>
       </div>
     </header>
 
