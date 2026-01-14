@@ -729,6 +729,180 @@
         font-weight: 500;
       }
 
+      /* Leadership Detailed Profile */
+      .leadership-detailed {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .leader-profile {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 50px;
+        background: var(--bg-white);
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: var(--shadow-lg);
+        align-items: start;
+      }
+
+      .leader-image-wrapper {
+        position: relative;
+      }
+
+      .leader-image {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .leader-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .leader-social-links {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .leader-social-links a {
+        width: 44px;
+        height: 44px;
+        background: var(--gradient-primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+      }
+
+      .leader-social-links a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.4);
+      }
+
+      .leader-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .leader-header h3 {
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 8px;
+      }
+
+      .leader-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--gradient-primary);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .leader-bio p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 12px;
+      }
+
+      .leader-bio p:last-child {
+        margin-bottom: 0;
+      }
+
+      .leader-bio strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      .leader-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .skill-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--bg-light);
+        color: var(--primary);
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 500;
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+      }
+
+      .skill-tag:hover {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+      }
+
+      .skill-tag i {
+        font-size: 16px;
+      }
+
+      /* Leadership Profile Responsive */
+      @media (max-width: 900px) {
+        .leader-profile {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .leader-image-wrapper {
+          max-width: 280px;
+          margin: 0 auto;
+        }
+
+        .leader-header {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .leader-skills {
+          justify-content: center;
+        }
+
+        .leader-bio p {
+          text-align: left;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .leader-profile {
+          padding: 24px;
+        }
+
+        .leader-header h3 {
+          font-size: 24px;
+        }
+
+        .leader-social-links a {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
       /* Founder Section */
       .founder-section {
         padding: 100px 0;
@@ -1579,8 +1753,8 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="team-member-avatar">DP</div>
-            <h4>Prashant Pandey</h4>
-            <p>Business Development Manager</p>
+            <h4>Dauly Pandey</h4>
+            <p>Director</p>
           </div>
           <div class="team-member">
             <div class="team-member-avatar">MM</div>
@@ -1663,18 +1837,39 @@
           <p>Meet the team driving excellence at OMNET IT SYSTEM.</p>
         </div>
 
-        <div class="team-grid">
-          <div class="team-card">
-            <div class="team-image">
-              <img src="prashant.jpeg" alt="Prashant Pandey" style="width: 100%; height: 100%; object-fit: cover;">
-              <div class="team-social">
-                <a href="https://www.linkedin.com/in/prashant-pandey-2997bb46/" target="_blank"><i class="ri-linkedin-fill"></i></a>
-                <a href="mailto:hello@omnetitsystem.com"><i class="ri-mail-fill"></i></a>
+        <div class="leadership-detailed">
+          <!-- Prashant Pandey -->
+          <div class="leader-profile">
+            <div class="leader-image-wrapper">
+              <div class="leader-image">
+                <img src="prashant.jpeg" alt="Prashant Pandey - Business Development Manager">
+              </div>
+              <div class="leader-social-links">
+                <a href="https://www.linkedin.com/in/prashant-pandey-2997bb46/" target="_blank" title="LinkedIn Profile">
+                  <i class="ri-linkedin-fill"></i>
+                </a>
+                <a href="mailto:hello@omnetitsystem.com" title="Email">
+                  <i class="ri-mail-fill"></i>
+                </a>
               </div>
             </div>
-            <div class="team-info">
-              <h3>Prashant Pandey</h3>
-              <p>BDM</p>
+            <div class="leader-content">
+              <div class="leader-header">
+                <h3>Prashant Pandey</h3>
+                <span class="leader-title">Business Development Manager</span>
+              </div>
+              <div class="leader-bio">
+                <p><strong>Strategic IT Infrastructure & Security Leader</strong> with <strong>14+ years of experience</strong> in Multi-Cloud, Zero Trust & IT Governance across <strong>BFSI, MSP & ITES</strong> sectors.</p>
+                <p>Expert in <strong>JumpCloud, Entra ID, Intune, CrowdStrike, Fortinet, and ServiceNow</strong> with proven results in enterprise IT transformation.</p>
+                <p><strong>Key Achievement:</strong> Delivered <strong>40% Ticket Reduction</strong> and <strong>₹50L+ Cost Savings</strong> through strategic IT initiatives.</p>
+              </div>
+              <div class="leader-skills">
+                <span class="skill-tag"><i class="ri-shield-check-line"></i> Zero Trust</span>
+                <span class="skill-tag"><i class="ri-cloud-line"></i> Multi-Cloud</span>
+                <span class="skill-tag"><i class="ri-settings-3-line"></i> IT Governance</span>
+                <span class="skill-tag"><i class="ri-shield-keyhole-line"></i> CrowdStrike</span>
+                <span class="skill-tag"><i class="ri-firewall-line"></i> Fortinet</span>
+              </div>
             </div>
           </div>
         </div>
