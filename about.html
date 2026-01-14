@@ -715,6 +715,140 @@
         font-weight: 500;
       }
 
+      /* Director Section */
+      .director-section {
+        padding: 100px 0;
+        background: var(--bg-light);
+      }
+
+      .director-grid {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .director-image {
+        position: relative;
+      }
+
+      .director-image img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: var(--shadow-xl);
+      }
+
+      .director-image::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        right: 15px;
+        bottom: 15px;
+        border: 3px solid var(--primary);
+        border-radius: 20px;
+        z-index: -1;
+      }
+
+      .director-content h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 8px;
+      }
+
+      .director-content h2 span {
+        color: var(--primary);
+      }
+
+      .director-role {
+        font-size: 18px;
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .director-role i {
+        font-size: 20px;
+      }
+
+      .director-content p {
+        font-size: 16px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 16px;
+      }
+
+      .director-quote {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        border-left: 4px solid var(--primary);
+        margin: 24px 0;
+        font-style: italic;
+        color: var(--text-primary);
+      }
+
+      .director-quote i {
+        color: var(--primary);
+        font-size: 24px;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .director-social {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .director-social a {
+        width: 44px;
+        height: 44px;
+        background: var(--primary);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .director-social a:hover {
+        background: var(--primary-dark);
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 900px) {
+        .director-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .director-image {
+          max-width: 350px;
+          margin: 0 auto;
+        }
+
+        .director-content {
+          text-align: center;
+        }
+
+        .director-role {
+          justify-content: center;
+        }
+
+        .director-social {
+          justify-content: center;
+        }
+      }
+
       /* Timeline */
       .timeline-section {
         padding: 100px 0;
@@ -1261,6 +1395,54 @@
             </div>
             <h3>Our Vision</h3>
             <p>To be the most trusted and preferred IT services partner in India, recognized for our technical excellence, customer-centric approach, and commitment to innovation. We aspire to set new standards in IT service delivery and be at the forefront of technological advancement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Director Section -->
+    <section class="director-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="ri-user-star-line"></i>
+            Leadership
+          </div>
+          <h2>Meet Our Director</h2>
+          <p>Driven by passion and commitment to deliver excellence in IT services.</p>
+        </div>
+
+        <div class="director-grid">
+          <div class="director-image">
+            <img src="director.png" alt="Director - OMNET IT SYSTEM">
+          </div>
+          
+          <div class="director-content">
+            <h2>Mrs. Dauly <span>Pandey</span></h2>
+            <div class="director-role">
+              <i class="ri-award-fill"></i>
+              Director & Co-Founder
+            </div>
+            
+            <p>Mrs. Dauly Pandey is the Director and Co-Founder of OMNET IT SYSTEM, bringing a unique blend of vision, leadership, and dedication to the company. With a strong commitment to excellence, she plays a pivotal role in shaping the company's strategic direction and ensuring the highest standards of service delivery.</p>
+            
+            <p>Under her guidance, OMNET IT SYSTEM is committed to building lasting relationships with clients through trust, transparency, and reliable IT solutions. Her focus on customer satisfaction and operational excellence drives the team to consistently exceed expectations.</p>
+            
+            <div class="director-quote">
+              <i class="ri-double-quotes-l"></i>
+              "Our success lies in understanding our clients' needs and delivering solutions that truly make a difference. At OMNET IT SYSTEM, we believe in building partnerships, not just providing services."
+            </div>
+            
+            <p>Mrs. Pandey's leadership philosophy centers on empowering the team, fostering innovation, and maintaining the highest ethical standards in all business dealings. Her vision is to make OMNET IT SYSTEM a household name for reliable IT support and enterprise solutions across India.</p>
+            
+            <div class="director-social">
+              <a href="https://www.linkedin.com/company/omnet-it-system/" target="_blank" title="LinkedIn">
+                <i class="ri-linkedin-fill"></i>
+              </a>
+              <a href="mailto:info@omnetitsystem.com" title="Email">
+                <i class="ri-mail-fill"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
