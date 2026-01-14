@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>IT Services | OMNET IT SYSTEM | Cloud, Cybersecurity, Infrastructure Management</title>
+    <meta name="description" content="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, data backup, networking, and 24/7 IT support. Serving Ghaziabad, Delhi, Noida, and NCR." />
+    <meta name="keywords" content="IT services, cloud solutions, cybersecurity, infrastructure management, data backup, networking, IT support, managed services" />
+    <link rel="canonical" href="https://omnetitsystem.com/services" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+      /* CSS Variables */
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --primary-light: #3b82f6;
+        --secondary: #0f172a;
+        --accent: #06b6d4;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --text-light: #94a3b8;
+        --bg-light: #f8fafc;
+        --bg-white: #ffffff;
+        --border: #e2e8f0;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --gradient-primary: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+        --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+
+      /* Reset & Base */
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: var(--text-primary);
+        line-height: 1.6;
+        background: var(--bg-white);
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        text-transform: none;
+      }
+
+      .btn-primary {
+        background: var(--gradient-primary);
+        color: white;
+        box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.4);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-white {
+        background: white;
+        color: var(--primary);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-white:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      /* Header */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+        transition: all 0.3s ease;
+      }
+
+      .header.scrolled {
+        box-shadow: var(--shadow);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--secondary);
+      }
+
+      .logo-icon {
+        width: 45px;
+        height: 45px;
+        background: var(--gradient-primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      .logo span {
+        color: var(--primary);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 32px;
+      }
+
+      .nav-links a {
+        font-weight: 500;
+        color: var(--text-secondary);
+        position: relative;
+        padding: 8px 0;
+      }
+
+      .nav-links a.active {
+        color: var(--primary);
+      }
+
+      .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a.active::after {
+        width: 100%;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .nav-phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .nav-phone i {
+        color: var(--primary);
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text-primary);
+      }
+
+      /* Page Header */
+      .page-header {
+        padding: 160px 0 80px;
+        background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+        opacity: 0.5;
+      }
+
+      .page-header-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-header .breadcrumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-bottom: 16px;
+      }
+
+      .page-header .breadcrumb a {
+        color: var(--primary);
+      }
+
+      .page-header .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .page-header h1 {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 16px;
+      }
+
+      .page-header h1 span {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .page-header p {
+        font-size: 18px;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Services Grid */
+      .services-section {
+        padding: 100px 0;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--primary);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      .section-header h2 {
+        font-size: 40px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 16px;
+      }
+
+      .section-header p {
+        font-size: 18px;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .service-card {
+        background: var(--bg-white);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 40px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--gradient-primary);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-xl);
+        border-color: transparent;
+      }
+
+      .service-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .service-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(37, 99, 235, 0.1);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        background: var(--gradient-primary);
+      }
+
+      .service-icon i {
+        font-size: 32px;
+        color: var(--primary);
+        transition: color 0.3s ease;
+      }
+
+      .service-card:hover .service-icon i {
+        color: white;
+      }
+
+      .service-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 12px;
+      }
+
+      .service-card p {
+        color: var(--text-secondary);
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
+
+      .service-features {
+        margin-bottom: 24px;
+      }
+
+      .service-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 0;
+        color: var(--text-secondary);
+        font-size: 14px;
+      }
+
+      .service-features li i {
+        color: var(--success);
+        font-size: 16px;
+      }
+
+      .service-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--primary);
+        font-weight: 600;
+        transition: gap 0.3s ease;
+      }
+
+      .service-link:hover {
+        gap: 12px;
+      }
+
+      /* Featured Service */
+      .featured-service {
+        padding: 100px 0;
+        background: var(--bg-light);
+      }
+
+      .featured-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .featured-content h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 20px;
+      }
+
+      .featured-content p {
+        color: var(--text-secondary);
+        margin-bottom: 30px;
+        line-height: 1.8;
+      }
+
+      .featured-list {
+        margin-bottom: 30px;
+      }
+
+      .featured-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .featured-list li:last-child {
+        border-bottom: none;
+      }
+
+      .featured-list-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--gradient-primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .featured-list-icon i {
+        color: white;
+        font-size: 20px;
+      }
+
+      .featured-list-content h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--secondary);
+        margin-bottom: 4px;
+      }
+
+      .featured-list-content p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+      }
+
+      .featured-visual {
+        position: relative;
+      }
+
+      .featured-image {
+        background: var(--gradient-primary);
+        border-radius: 24px;
+        padding: 40px;
+        position: relative;
+      }
+
+      .featured-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .featured-stat {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 24px;
+        border-radius: 16px;
+        text-align: center;
+      }
+
+      .featured-stat i {
+        font-size: 32px;
+        color: var(--primary);
+        margin-bottom: 12px;
+      }
+
+      .featured-stat h4 {
+        font-size: 28px;
+        font-weight: 800;
+        color: var(--secondary);
+      }
+
+      .featured-stat p {
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-bottom: 0;
+      }
+
+      /* Process Section */
+      .process-section {
+        padding: 100px 0;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        position: relative;
+      }
+
+      .process-grid::before {
+        content: '';
+        position: absolute;
+        top: 50px;
+        left: 12.5%;
+        right: 12.5%;
+        height: 2px;
+        background: var(--border);
+        z-index: 0;
+      }
+
+      .process-step {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .process-number {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+        font-size: 28px;
+        font-weight: 800;
+        color: white;
+        box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
+      }
+
+      .process-step h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 8px;
+      }
+
+      .process-step p {
+        font-size: 14px;
+        color: var(--text-secondary);
+      }
+
+      /* CTA Section */
+      .cta {
+        padding: 100px 0;
+        background: var(--gradient-dark);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      }
+
+      .cta-inner {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta h2 {
+        font-size: 42px;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .cta p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 600px;
+        margin: 0 auto 40px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--secondary);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 80px 0 0;
+      }
+
+      .footer-inner {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-brand .logo {
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .footer-brand .logo-icon {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-brand .logo span {
+        color: var(--accent);
+      }
+
+      .footer-brand p {
+        margin-bottom: 24px;
+        line-height: 1.7;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 12px;
+      }
+
+      .footer-social a {
+        width: 42px;
+        height: 42px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background: var(--primary);
+        transform: translateY(-3px);
+      }
+
+      .footer-links h4 {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent);
+        padding-left: 5px;
+      }
+
+      .footer-bottom {
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-bottom p {
+        font-size: 14px;
+      }
+
+      .footer-bottom-links {
+        display: flex;
+        gap: 24px;
+      }
+
+      .footer-bottom-links a {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-bottom-links a:hover {
+        color: var(--accent);
+      }
+
+      /* Back to Top */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-primary);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-lg);
+        z-index: 999;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Mobile Menu */
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 24px;
+        box-shadow: var(--shadow-lg);
+        z-index: 999;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 0;
+        font-weight: 500;
+        color: var(--text-primary);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .mobile-menu a:last-child {
+        border-bottom: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .featured-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .process-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+
+        .process-grid::before {
+          display: none;
+        }
+
+        .footer-inner {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links, .nav-cta .btn, .nav-phone {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .page-header {
+          padding: 120px 0 60px;
+        }
+
+        .page-header h1 {
+          font-size: 32px;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .process-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta h2 {
+          font-size: 28px;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .footer-brand, .footer-social {
+          justify-content: center;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 16px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header-inner">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <i class="ri-server-line"></i>
+            </div>
+            OMNET <span>IT</span>
+          </a>
+
+          <nav class="nav">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html" class="active">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="why-us.html">Why Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+              <a href="tel:+919717270865" class="nav-phone">
+                <i class="ri-phone-fill"></i>
+                +91-97172-70865
+              </a>
+              <a href="contact.html" class="btn btn-primary">Get Started</a>
+            </div>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="ri-menu-3-line"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="why-us.html">Why Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:+919717270865">Call: +91-97172-70865</a>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="ri-arrow-right-s-line"></i>
+            <span>Services</span>
+          </div>
+          <h1>Our <span>IT Services</span></h1>
+          <p>Comprehensive technology solutions designed to drive your business forward with security, reliability, and innovation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="ri-service-line"></i>
+            What We Offer
+          </div>
+          <h2>Enterprise IT Solutions</h2>
+          <p>From cloud infrastructure to cybersecurity, we provide end-to-end IT services tailored to your business needs.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Cloud Solutions -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-cloud-line"></i>
+            </div>
+            <h3>Cloud Solutions</h3>
+            <p>Migrate, manage, and optimize your cloud infrastructure with our expert cloud services.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> AWS, Azure & Google Cloud</li>
+              <li><i class="ri-check-line"></i> Cloud Migration Services</li>
+              <li><i class="ri-check-line"></i> Hybrid Cloud Architecture</li>
+              <li><i class="ri-check-line"></i> Cost Optimization</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- Cybersecurity -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-shield-keyhole-line"></i>
+            </div>
+            <h3>Cybersecurity</h3>
+            <p>Protect your business from cyber threats with our comprehensive security solutions.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> Threat Detection & Response</li>
+              <li><i class="ri-check-line"></i> Firewall Management</li>
+              <li><i class="ri-check-line"></i> Security Audits</li>
+              <li><i class="ri-check-line"></i> Compliance Management</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- Infrastructure Management -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-server-line"></i>
+            </div>
+            <h3>Infrastructure Management</h3>
+            <p>Complete infrastructure solutions from servers to storage and everything in between.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> Server Administration</li>
+              <li><i class="ri-check-line"></i> Virtualization (VMware, Hyper-V)</li>
+              <li><i class="ri-check-line"></i> Storage Solutions</li>
+              <li><i class="ri-check-line"></i> Performance Monitoring</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- IT Support -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-customer-service-2-line"></i>
+            </div>
+            <h3>24/7 IT Support</h3>
+            <p>Round-the-clock technical support to keep your business running smoothly.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> Help Desk Services</li>
+              <li><i class="ri-check-line"></i> Remote & On-site Support</li>
+              <li><i class="ri-check-line"></i> Incident Management</li>
+              <li><i class="ri-check-line"></i> SLA-backed Response</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- Data Backup -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-database-2-line"></i>
+            </div>
+            <h3>Data Backup & Recovery</h3>
+            <p>Ensure business continuity with our robust backup and disaster recovery solutions.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> Automated Backups</li>
+              <li><i class="ri-check-line"></i> Disaster Recovery Planning</li>
+              <li><i class="ri-check-line"></i> Data Replication</li>
+              <li><i class="ri-check-line"></i> Quick Recovery Solutions</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- Networking -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-global-line"></i>
+            </div>
+            <h3>Network Solutions</h3>
+            <p>Design, implement, and manage high-performance network infrastructure.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> Network Design & Setup</li>
+              <li><i class="ri-check-line"></i> WiFi Solutions</li>
+              <li><i class="ri-check-line"></i> VPN & Remote Access</li>
+              <li><i class="ri-check-line"></i> Network Security</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- Software Solutions -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-code-s-slash-line"></i>
+            </div>
+            <h3>Software Solutions</h3>
+            <p>Custom software development and integration services for your business needs.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> Custom Development</li>
+              <li><i class="ri-check-line"></i> API Integration</li>
+              <li><i class="ri-check-line"></i> ERP & CRM Solutions</li>
+              <li><i class="ri-check-line"></i> Legacy System Migration</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- IT Consulting -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-lightbulb-line"></i>
+            </div>
+            <h3>IT Consulting</h3>
+            <p>Strategic IT consulting to align technology with your business objectives.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> IT Strategy & Roadmap</li>
+              <li><i class="ri-check-line"></i> Technology Assessment</li>
+              <li><i class="ri-check-line"></i> Digital Transformation</li>
+              <li><i class="ri-check-line"></i> Vendor Management</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <!-- Hardware Solutions -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="ri-computer-line"></i>
+            </div>
+            <h3>Hardware Solutions</h3>
+            <p>Procurement, installation, and maintenance of enterprise hardware.</p>
+            <ul class="service-features">
+              <li><i class="ri-check-line"></i> Hardware Procurement</li>
+              <li><i class="ri-check-line"></i> Installation & Setup</li>
+              <li><i class="ri-check-line"></i> Maintenance & Repair</li>
+              <li><i class="ri-check-line"></i> Asset Management</li>
+            </ul>
+            <a href="contact.html" class="service-link">
+              Learn More <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Service -->
+    <section class="featured-service">
+      <div class="container">
+        <div class="featured-grid">
+          <div class="featured-content">
+            <div class="section-badge">
+              <i class="ri-star-line"></i>
+              Featured Service
+            </div>
+            <h2>Managed IT Services</h2>
+            <p>Let us handle your IT infrastructure while you focus on growing your business. Our managed services provide comprehensive IT support with predictable costs and guaranteed uptime.</p>
+            
+            <ul class="featured-list">
+              <li>
+                <div class="featured-list-icon">
+                  <i class="ri-shield-check-line"></i>
+                </div>
+                <div class="featured-list-content">
+                  <h4>Proactive Monitoring</h4>
+                  <p>24/7 monitoring of your systems to identify and resolve issues before they impact your business.</p>
+                </div>
+              </li>
+              <li>
+                <div class="featured-list-icon">
+                  <i class="ri-tools-line"></i>
+                </div>
+                <div class="featured-list-content">
+                  <h4>Preventive Maintenance</h4>
+                  <p>Regular updates, patches, and maintenance to keep your systems running optimally.</p>
+                </div>
+              </li>
+              <li>
+                <div class="featured-list-icon">
+                  <i class="ri-money-dollar-circle-line"></i>
+                </div>
+                <div class="featured-list-content">
+                  <h4>Predictable Pricing</h4>
+                  <p>Fixed monthly costs make budgeting easy with no surprise expenses.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="contact.html" class="btn btn-primary">
+              <i class="ri-arrow-right-line"></i>
+              Get a Free Assessment
+            </a>
+          </div>
+
+          <div class="featured-visual">
+            <div class="featured-image">
+              <div class="featured-stats">
+                <div class="featured-stat">
+                  <i class="ri-time-line"></i>
+                  <h4>99.9%</h4>
+                  <p>Uptime Guarantee</p>
+                </div>
+                <div class="featured-stat">
+                  <i class="ri-customer-service-line"></i>
+                  <h4>&lt;15min</h4>
+                  <p>Response Time</p>
+                </div>
+                <div class="featured-stat">
+                  <i class="ri-team-line"></i>
+                  <h4>50+</h4>
+                  <p>IT Experts</p>
+                </div>
+                <div class="featured-stat">
+                  <i class="ri-award-line"></i>
+                  <h4>10+</h4>
+                  <p>Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="ri-flow-chart"></i>
+            Our Process
+          </div>
+          <h2>How We Work</h2>
+          <p>A systematic approach to delivering exceptional IT services</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <h3>Discovery</h3>
+            <p>We analyze your current IT infrastructure and understand your business goals.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <h3>Planning</h3>
+            <p>Our experts design a customized solution tailored to your specific needs.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <h3>Implementation</h3>
+            <p>We deploy solutions with minimal disruption to your operations.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <h3>Support</h3>
+            <p>Ongoing monitoring, maintenance, and support to ensure optimal performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <h2>Ready to Optimize Your IT Infrastructure?</h2>
+          <p>Contact us today for a free consultation and discover how our services can transform your business.</p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-white">
+              <i class="ri-mail-line"></i>
+              Contact Us
+            </a>
+            <a href="tel:+919717270865" class="btn btn-secondary" style="border-color: white; color: white;">
+              <i class="ri-phone-line"></i>
+              Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <div class="logo-icon">
+                <i class="ri-server-line"></i>
+              </div>
+              OMNET <span>IT</span>
+            </a>
+            <p>Your trusted partner for enterprise IT solutions. We deliver secure, scalable, and innovative technology services across NCR.</p>
+            <div class="footer-social">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Cloud Solutions</a></li>
+              <li><a href="services.html">Cybersecurity</a></li>
+              <li><a href="services.html">IT Support</a></li>
+              <li><a href="services.html">Networking</a></li>
+              <li><a href="services.html">Data Backup</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="why-us.html">Why Choose Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="tel:+919717270865">+91-97172-70865</a></li>
+              <li><a href="mailto:info@omnetitsystem.com">info@omnetitsystem.com</a></li>
+              <li><a href="#">Ghaziabad, UP, India</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 OMNET IT SYSTEM. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.classList.toggle('ri-menu-3-line');
+        icon.classList.toggle('ri-close-line');
+      });
+
+      // Header Scroll Effect
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Back to Top
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
