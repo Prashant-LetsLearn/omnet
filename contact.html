@@ -247,16 +247,30 @@
         gap: 16px;
       }
 
+      .nav-phones {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        text-align: right;
+      }
+
       .nav-phone {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         font-weight: 600;
         color: var(--text-primary);
+        font-size: 14px;
       }
 
       .nav-phone i {
         color: var(--primary);
+        font-size: 14px;
+      }
+
+      .nav-phone.landline {
+        font-size: 13px;
+        color: var(--text-secondary);
       }
 
       .mobile-menu-btn {
@@ -1357,10 +1371,16 @@
             </ul>
 
             <div class="nav-cta">
-              <a href="tel:+919717270865" class="nav-phone">
-                <i class="ri-phone-fill"></i>
-                +91-97172-70865
-              </a>
+              <div class="nav-phones">
+                <a href="tel:+919717270865" class="nav-phone">
+                  <i class="ri-smartphone-line"></i>
+                  +91-97172-70865
+                </a>
+                <a href="tel:+911205223376" class="nav-phone landline">
+                  <i class="ri-phone-line"></i>
+                  +91-120-522-3376
+                </a>
+              </div>
               <a href="contact.html" class="btn btn-primary">Get Started</a>
             </div>
           </nav>
@@ -1378,7 +1398,8 @@
         <a href="about.html">About</a>
         <a href="why-us.html">Why Us</a>
         <a href="contact.html">Contact</a>
-        <a href="tel:+919717270865">Call: +91-97172-70865</a>
+        <a href="tel:+919717270865">📱 +91-97172-70865</a>
+        <a href="tel:+911205223376">☎️ +91-120-522-3376</a>
       </div>
     </header>
 
