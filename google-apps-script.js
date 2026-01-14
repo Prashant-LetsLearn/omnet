@@ -1,85 +1,68 @@
 // ============================================
-// GOOGLE APPS SCRIPT - Form Handler
+// GOOGLE APPS SCRIPT - Contact Form Handler
 // ============================================
-// Deploy this as a Web App in Google Apps Script
 // 
-// SETUP INSTRUCTIONS:
-// 1. Go to: https://script.google.com
-// 2. Create a new project
-// 3. Paste this code
-// 4. Update the SHEET_ID below
-// 5. Deploy as Web App (Execute as: Me, Access: Anyone)
-// 6. Copy the Web App URL and use it in your form
+// SETUP STEPS:
+// 1. Go to https://script.google.com
+// 2. Create new project, paste this code
+// 3. Update CONFIG below with your details
+// 4. Click Deploy → New deployment → Web app
+// 5. Execute as: Me | Access: Anyone
+// 6. Copy the Web App URL for your website
 // ============================================
 
-// ========== CONFIGURATION ==========
+// ========== CONFIGURATION - UPDATE THESE! ==========
 const CONFIG = {
-  // Your Google Sheet ID (from the URL)
+  // Your Google Sheet ID (already set to your sheet)
   SHEET_ID: '1P0zJqOlrZgwUXAuTM4ussv_o_eLmNMQcOAj9UoYMFt0',
   
-  // Sheet name (tab name)
+  // Sheet tab name
   SHEET_NAME: 'Form Responses',
   
-  // WhatsApp Configuration (CallMeBot - FREE!)
+  // WhatsApp via CallMeBot (FREE)
+  // To get API key: Save +34 644 71 99 43 → Send "I allow callmebot to send me messages"
   WHATSAPP: {
     enabled: true,
-    phone: '919717270865',  // Country code + number (no + sign)
-    apiKey: 'YOUR_CALLMEBOT_API_KEY'  // Get from CallMeBot setup
+    phone: '919717270865',  // Your number with country code (no + sign)
+    apiKey: 'YOUR_CALLMEBOT_API_KEY'  // ⚠️ REPLACE THIS after getting from CallMeBot
   },
   
-  // Email notification (backup)
+  // Email backup notification
   EMAIL: {
     enabled: true,
-    recipient: 'your-email@example.com'
+    recipient: 'YOUR_EMAIL@example.com'  // ⚠️ REPLACE with your email
   }
 };
 
-// ========== MAIN HANDLER ==========
+// ========== MAIN HANDLER (Don't modify) ==========
 function doPost(e) {
   try {
-    // Parse incoming data
     const data = JSON.parse(e.postData.contents);
-    
-    // Save to Google Sheet
     const result = saveToSheet(data);
     
-    // Send WhatsApp notification
-    if (CONFIG.WHATSAPP.enabled) {
+    if (CONFIG.WHATSAPP.enabled && CONFIG.WHATSAPP.apiKey !== 'YOUR_CALLMEBOT_API_KEY') {
       sendWhatsAppNotification(data);
     }
     
-    // Send Email notification (backup)
-    if (CONFIG.EMAIL.enabled) {
+    if (CONFIG.EMAIL.enabled && CONFIG.EMAIL.recipient !== 'YOUR_EMAIL@example.com') {
       sendEmailNotification(data);
     }
     
-    // Return success response
     return ContentService
-      .createTextOutput(JSON.stringify({
-        success: true,
-        message: 'Form submitted successfully!',
-        row: result.row
-      }))
+      .createTextOutput(JSON.stringify({ success: true, row: result.row }))
       .setMimeType(ContentService.MimeType.JSON);
       
   } catch (error) {
-    // Return error response
+    Logger.log('Error: ' + error.toString());
     return ContentService
-      .createTextOutput(JSON.stringify({
-        success: false,
-        message: error.toString()
-      }))
+      .createTextOutput(JSON.stringify({ success: false, message: error.toString() }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
-// Handle GET requests (for testing)
 function doGet(e) {
   return ContentService
-    .createTextOutput(JSON.stringify({
-      status: 'active',
-      message: 'Form handler is running!'
-    }))
+    .createTextOutput(JSON.stringify({ status: 'active', message: 'Form handler is running!' }))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -88,29 +71,15 @@ function saveToSheet(data) {
   const spreadsheet = SpreadsheetApp.openById(CONFIG.SHEET_ID);
   let sheet = spreadsheet.getSheetByName(CONFIG.SHEET_NAME);
   
-  // Create sheet if it doesn't exist
   if (!sheet) {
     sheet = spreadsheet.insertSheet(CONFIG.SHEET_NAME);
-    // Add headers
-    const headers = [
-      'Timestamp',
-      'First Name',
-      'Last Name',
-      'Email',
-      'Phone',
-      'Company',
-      'Company Size',
-      'Service',
-      'Budget',
-      'Message',
-      'Status'
-    ];
+    const headers = ['Timestamp', 'First Name', 'Last Name', 'Email', 'Phone', 
+                     'Company', 'Company Size', 'Service', 'Budget', 'Message', 'Status'];
     sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
     sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold');
     sheet.setFrozenRows(1);
   }
   
-  // Prepare row data
   const rowData = [
     new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
     data.firstName || '',
@@ -125,51 +94,42 @@ function saveToSheet(data) {
     'New'
   ];
   
-  // Append row
   sheet.appendRow(rowData);
-  const lastRow = sheet.getLastRow();
-  
-  return { row: lastRow };
+  return { row: sheet.getLastRow() };
 }
 
-// ========== WHATSAPP NOTIFICATION (CallMeBot) ==========
+// ========== WHATSAPP NOTIFICATION ==========
 function sendWhatsAppNotification(data) {
-  // Format message
-  const message = `🔔 *New Contact Form Submission*
+  const message = `🔔 *New Contact Form*
 
 👤 *Name:* ${data.firstName} ${data.lastName}
 📧 *Email:* ${data.email}
 📱 *Phone:* ${data.phone}
-🏢 *Company:* ${data.company || 'Not specified'}
-👥 *Size:* ${data.employees || 'Not specified'}
+🏢 *Company:* ${data.company || 'N/A'}
+👥 *Size:* ${data.employees || 'N/A'}
 🎯 *Service:* ${data.service}
-💰 *Budget:* ${data.budget || 'Not specified'}
+💰 *Budget:* ${data.budget || 'N/A'}
 
 📝 *Message:*
 ${data.message}
 
 ⏰ ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`;
 
-  // CallMeBot API URL
   const url = `https://api.callmebot.com/whatsapp.php?phone=${CONFIG.WHATSAPP.phone}&text=${encodeURIComponent(message)}&apikey=${CONFIG.WHATSAPP.apiKey}`;
   
   try {
-    const response = UrlFetchApp.fetch(url, {
-      method: 'GET',
-      muteHttpExceptions: true
-    });
-    Logger.log('WhatsApp sent: ' + response.getContentText());
+    UrlFetchApp.fetch(url, { method: 'GET', muteHttpExceptions: true });
+    Logger.log('WhatsApp sent successfully');
   } catch (error) {
     Logger.log('WhatsApp error: ' + error.toString());
   }
 }
 
-// ========== EMAIL NOTIFICATION (Backup) ==========
+// ========== EMAIL NOTIFICATION ==========
 function sendEmailNotification(data) {
-  const subject = `🔔 New Contact Form: ${data.firstName} ${data.lastName} - ${data.service}`;
+  const subject = `🔔 New Contact: ${data.firstName} ${data.lastName} - ${data.service}`;
   
-  const body = `
-New Contact Form Submission
+  const body = `New Contact Form Submission
 ============================
 
 Name: ${data.firstName} ${data.lastName}
@@ -184,22 +144,17 @@ Message:
 ${data.message}
 
 ---
-Submitted: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
-`;
+Submitted: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`;
 
   try {
-    MailApp.sendEmail({
-      to: CONFIG.EMAIL.recipient,
-      subject: subject,
-      body: body
-    });
+    MailApp.sendEmail({ to: CONFIG.EMAIL.recipient, subject: subject, body: body });
     Logger.log('Email sent successfully');
   } catch (error) {
     Logger.log('Email error: ' + error.toString());
   }
 }
 
-// ========== TEST FUNCTION ==========
+// ========== TEST FUNCTION - Run this to verify setup ==========
 function testSubmission() {
   const testData = {
     firstName: 'Test',
@@ -210,9 +165,21 @@ function testSubmission() {
     employees: '11-50',
     service: 'cloud',
     budget: '50k-1l',
-    message: 'This is a test submission'
+    message: 'This is a test submission from Google Apps Script'
   };
   
   saveToSheet(testData);
-  Logger.log('Test data saved to sheet');
+  Logger.log('✅ Test data saved to sheet!');
+  
+  if (CONFIG.WHATSAPP.apiKey !== 'YOUR_CALLMEBOT_API_KEY') {
+    sendWhatsAppNotification(testData);
+  } else {
+    Logger.log('⚠️ WhatsApp not configured - update apiKey in CONFIG');
+  }
+  
+  if (CONFIG.EMAIL.recipient !== 'YOUR_EMAIL@example.com') {
+    sendEmailNotification(testData);
+  } else {
+    Logger.log('⚠️ Email not configured - update recipient in CONFIG');
+  }
 }

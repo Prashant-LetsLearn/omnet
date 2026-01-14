@@ -1404,7 +1404,7 @@
                 <div class="contact-card-content">
                   <h4>Email Us</h4>
                   <p>Get a response within 24 hours</p>
-                  <a href="mailto:hello@omnetitsystem.com">hello@omnetitsystem.com</a>
+                  <a href="/cdn-cgi/l/email-protection#cca4a9a0a0a38ca3a1a2a9b8a5b8bfb5bfb8a9a1e2afa3a1"><span class="__cf_email__" data-cfemail="147c7178787b547b797a71607d60676d676071793a777b79">[email&#160;protected]</span></a>
                 </div>
               </div>
 
@@ -1596,13 +1596,13 @@
             <span class="link">Start Chat <i class="ri-arrow-right-line"></i></span>
           </a>
 
-          <a href="mailto:hello@omnetitsystem.com" class="quick-option">
+          <a href="/cdn-cgi/l/email-protection#bfd7dad3d3d0ffd0d2d1dacbd6cbccc6cccbdad291dcd0d2" class="quick-option">
             <div class="quick-option-icon">
               <i class="ri-mail-fill"></i>
             </div>
             <h4>Email Us</h4>
             <p>Detailed inquiries with documents and attachments</p>
-            <span class="link">hello@omnetitsystem.com <i class="ri-arrow-right-line"></i></span>
+            <span class="link"><span class="__cf_email__" data-cfemail="d4bcb1b8b8bb94bbb9bab1a0bda0a7ada7a0b1b9fab7bbb9">[email&#160;protected]</span> <i class="ri-arrow-right-line"></i></span>
           </a>
 
           <a href="#" class="quick-option">
@@ -1641,7 +1641,7 @@
                 </div>
                 <div class="location-detail">
                   <i class="ri-mail-line"></i>
-                  <a href="mailto:hello@omnetitsystem.com">hello@omnetitsystem.com</a>
+                  <a href="/cdn-cgi/l/email-protection#dcb4b9b0b0b39cb3b1b2b9a8b5a8afa5afa8b9b1f2bfb3b1"><span class="__cf_email__" data-cfemail="127a777e7e7d527d7f7c77667b66616b6166777f3c717d7f">[email&#160;protected]</span></a>
                 </div>
                 <div class="location-detail">
                   <i class="ri-time-line"></i>
@@ -1665,7 +1665,7 @@
                 </div>
                 <div class="location-detail">
                   <i class="ri-mail-line"></i>
-                  <a href="mailto:hello@omnetitsystem.com">hello@omnetitsystem.com</a>
+                  <a href="/cdn-cgi/l/email-protection#bfd7dad3d3d0ffd0d2d1dacbd6cbccc6cccbdad291dcd0d2"><span class="__cf_email__" data-cfemail="2b434e4747446b4446454e5f425f5852585f4e4605484446">[email&#160;protected]</span></a>
                 </div>
                 <div class="location-detail">
                   <i class="ri-time-line"></i>
@@ -1689,7 +1689,7 @@
                 </div>
                 <div class="location-detail">
                   <i class="ri-mail-line"></i>
-                  <a href="mailto:hello@omnetitsystem.com">hello@omnetitsystem.com</a>
+                  <a href="/cdn-cgi/l/email-protection#147c7178787b547b797a71607d60676d676071793a777b79"><span class="__cf_email__" data-cfemail="9df5f8f1f1f2ddf2f0f3f8e9f4e9eee4eee9f8f0b3fef2f0">[email&#160;protected]</span></a>
                 </div>
                 <div class="location-detail">
                   <i class="ri-time-line"></i>
@@ -1849,7 +1849,7 @@
             <h4>Contact</h4>
             <ul>
               <li><a href="tel:+919717270865">+91-97172-70865</a></li>
-              <li><a href="mailto:hello@omnetitsystem.com">hello@omnetitsystem.com</a></li>
+              <li><a href="/cdn-cgi/l/email-protection#c7afa2ababa887a8aaa9a2b3aeb3b4beb4b3a2aae9a4a8aa"><span class="__cf_email__" data-cfemail="88e0ede4e4e7c8e7e5e6edfce1fcfbf1fbfcede5a6ebe7e5">[email&#160;protected]</span></a></li>
               <li><a href="#">Ghaziabad, UP</a></li>
               <li><a href="#">Delhi NCR</a></li>
             </ul>
@@ -1872,7 +1872,7 @@
       <i class="ri-arrow-up-line"></i>
     </a>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
       // Mobile Menu Toggle
       const mobileMenuBtn = document.getElementById('mobileMenuBtn');
       const mobileMenu = document.getElementById('mobileMenu');
@@ -1904,43 +1904,78 @@
         }
       });
 
-      // Form Submission
+      // ========== FORM CONFIGURATION ==========
+      // IMPORTANT: Replace this URL with your deployed Google Apps Script Web App URL
+      const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+      
+      // ========== FORM SUBMISSION ==========
       const contactForm = document.getElementById('contactForm');
       const formSuccess = document.getElementById('formSuccess');
 
-      contactForm.addEventListener('submit', (e) => {
+      contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Simulate form submission
         const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitBtn.innerHTML;
+        
+        // Show loading state
         submitBtn.innerHTML = '<i class="ri-loader-4-line" style="animation: spin 1s linear infinite;"></i> Sending...';
         submitBtn.disabled = true;
-
-        setTimeout(() => {
+        
+        // Collect form data
+        const formData = {
+          firstName: document.getElementById('firstName').value.trim(),
+          lastName: document.getElementById('lastName').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          company: document.getElementById('company').value.trim(),
+          employees: document.getElementById('employees').value,
+          service: document.getElementById('service').value,
+          budget: document.getElementById('budget').value,
+          message: document.getElementById('message').value.trim(),
+          timestamp: new Date().toISOString()
+        };
+        
+        try {
+          // Send to Google Apps Script
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Required for Google Apps Script
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+          });
+          
+          // Show success message
           contactForm.style.display = 'none';
-          document.querySelector('.form-header').style.display = 'none';
-          formSuccess.classList.add('show');
-        }, 1500);
+          formSuccess.style.display = 'block';
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+        } catch (error) {
+          console.error('Form submission error:', error);
+          alert('Something went wrong. Please try again or contact us directly at +91-9717270865');
+          
+          // Reset button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalButtonText;
+        }
       });
 
+      // Reset Form Function
       function resetForm() {
         contactForm.reset();
-        contactForm.style.display = 'flex';
-        document.querySelector('.form-header').style.display = 'block';
-        formSuccess.classList.remove('show');
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        submitBtn.innerHTML = '<i class="ri-send-plane-fill"></i> Send Message';
         submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="ri-send-plane-fill"></i> Send Message';
+        formSuccess.style.display = 'none';
+        contactForm.style.display = 'block';
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-
-      // Add spin animation
+      
+      // Spin animation for loading
       const style = document.createElement('style');
-      style.textContent = `
-        @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-      `;
+      style.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
       document.head.appendChild(style);
     </script>
   </body>
