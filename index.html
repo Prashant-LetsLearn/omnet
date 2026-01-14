@@ -96,19 +96,16 @@
       }
       .header.scrolled { box-shadow: var(--shadow); }
       .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-      .logo { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 800; color: var(--secondary); }
-      .logo-icon {
-        width: 45px;
-        height: 45px;
-        background: var(--gradient-primary);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 20px;
+      .logo { display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 800; color: var(--secondary); text-decoration: none; }
+      .logo img {
+        height: 50px;
+        width: auto;
+        border-radius: 8px;
       }
-      .logo span { color: var(--primary); }
+      .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+      .logo-text .company-name { font-size: 18px; font-weight: 800; color: var(--secondary); }
+      .logo-text .company-name span { color: var(--primary); }
+      .logo-text .tagline { font-size: 10px; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.5px; }
       .nav { display: flex; align-items: center; gap: 40px; }
       .nav-links { display: flex; gap: 32px; }
       .nav-links a { font-weight: 500; color: var(--text-secondary); position: relative; padding: 8px 0; }
@@ -336,13 +333,17 @@
       }
       .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.1); }
       .footer-brand .logo { color: white; margin-bottom: 16px; }
-      .footer-brand .logo-icon { background: rgba(255,255,255,0.1); }
-      .footer-brand .logo span { color: var(--accent); }
+      .footer-brand .logo img { height: 45px; border-radius: 6px; }
+      .footer-brand .logo .company-name { color: white; }
+      .footer-brand .logo .company-name span { color: var(--accent); }
       .footer-brand p { line-height: 1.7; font-size: 14px; }
       .footer-links h4 { color: white; font-size: 16px; font-weight: 700; margin-bottom: 20px; }
       .footer-links ul { display: flex; flex-direction: column; gap: 10px; }
       .footer-links a { color: rgba(255,255,255,0.7); font-size: 14px; transition: all 0.3s ease; }
       .footer-links a:hover { color: var(--accent); padding-left: 5px; }
+      .footer-social { display: flex; gap: 12px; }
+      .footer-social a { width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; transition: all 0.3s ease; }
+      .footer-social a:hover { background: var(--primary); transform: translateY(-2px); }
       .footer-bottom { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
       .footer-bottom p { font-size: 14px; }
       .footer-bottom-links { display: flex; gap: 24px; }
@@ -410,10 +411,10 @@
       <div class="container">
         <div class="header-inner">
           <a href="index.html" class="logo">
-            <div class="logo-icon">
-              <i class="ri-server-line"></i>
+            <img src="logo.jpeg" alt="OMNET IT SYSTEM Logo">
+            <div class="logo-text">
+              <span class="company-name">OMNET <span>IT SYSTEM</span></span>
             </div>
-            OMNET <span>IT</span>
           </a>
 
           <nav class="nav">
@@ -806,10 +807,10 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <a href="index.html" class="logo">
-              <div class="logo-icon">
-                <i class="ri-server-line"></i>
+              <img src="logo.jpeg" alt="OMNET IT SYSTEM Logo">
+              <div class="logo-text">
+                <span class="company-name">OMNET <span>IT SYSTEM</span></span>
               </div>
-              OMNET <span>IT</span>
             </a>
             <p>Your trusted partner for Enterprise IT Solutions and AMC Services. Delivering reliable technology solutions across Delhi NCR.</p>
           </div>
@@ -841,6 +842,11 @@
               <li><a href="mailto:info@omnetitsystem.com">info@omnetitsystem.com</a></li>
               <li><a href="#">Ghaziabad, UP, India</a></li>
             </ul>
+            <div class="footer-social" style="margin-top: 16px;">
+              <a href="https://www.linkedin.com/company/omnet-it-system/" target="_blank" title="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+              <a href="https://x.com/omnetit" target="_blank" title="Twitter"><i class="ri-twitter-x-fill"></i></a>
+              <a href="https://www.facebook.com/OMNETITSYSTEMS" target="_blank" title="Facebook"><i class="ri-facebook-fill"></i></a>
+            </div>
           </div>
         </div>
 
