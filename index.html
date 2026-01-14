@@ -696,6 +696,190 @@
         color: var(--primary);
       }
 
+      /* IT Services Portfolio Section */
+      .portfolio-section {
+        padding: 100px 0;
+        background: white;
+      }
+
+      .portfolio-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+      }
+
+      .portfolio-header h2 {
+        font-size: 38px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 16px;
+      }
+
+      .portfolio-header h2 span {
+        color: var(--primary);
+      }
+
+      .portfolio-header p {
+        font-size: 16px;
+        color: var(--text-secondary);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .portfolio-card {
+        background: var(--bg-light);
+        border-radius: 16px;
+        padding: 32px 24px;
+        text-align: center;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+
+      .portfolio-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .portfolio-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--gradient-primary);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 32px;
+        margin: 0 auto 20px;
+      }
+
+      .portfolio-card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 16px;
+      }
+
+      .portfolio-card ul {
+        text-align: left;
+      }
+
+      .portfolio-card ul li {
+        font-size: 14px;
+        color: var(--text-secondary);
+        padding: 6px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .portfolio-card ul li i {
+        color: var(--primary);
+        font-size: 16px;
+      }
+
+      /* Why Choose Us Section */
+      .why-choose-section {
+        padding: 100px 0;
+        background: var(--bg-light);
+      }
+
+      .why-choose-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+      }
+
+      .why-choose-header h2 {
+        font-size: 38px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 16px;
+      }
+
+      .why-choose-header h2 span {
+        color: var(--primary);
+      }
+
+      .why-choose-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-bottom: 50px;
+      }
+
+      .why-choose-card {
+        background: white;
+        border-radius: 12px;
+        padding: 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border);
+      }
+
+      .why-choose-card:hover {
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary);
+      }
+
+      .why-choose-card i {
+        font-size: 24px;
+        color: var(--success);
+      }
+
+      .why-choose-card span {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--secondary);
+      }
+
+      .strengths-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+      }
+
+      .strength-item {
+        background: white;
+        border-radius: 12px;
+        padding: 24px 16px;
+        text-align: center;
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+      }
+
+      .strength-item:hover {
+        border-color: var(--primary);
+        background: rgba(37, 99, 235, 0.02);
+      }
+
+      .strength-number {
+        width: 40px;
+        height: 40px;
+        background: var(--gradient-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        margin: 0 auto 12px;
+      }
+
+      .strength-item p {
+        font-size: 13px;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+
       /* Social Connect Section */
       .social-connect {
         padding: 60px 0;
@@ -951,6 +1135,18 @@
         .amc-features {
           grid-template-columns: repeat(2, 1fr);
         }
+
+        .portfolio-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .why-choose-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .strengths-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
       @media (max-width: 768px) {
@@ -1013,6 +1209,26 @@
 
         .amc-services-grid {
           grid-template-columns: 1fr;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .portfolio-header h2 {
+          font-size: 28px;
+        }
+
+        .why-choose-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .why-choose-header h2 {
+          font-size: 28px;
+        }
+
+        .strengths-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .amc-features {
@@ -1086,27 +1302,27 @@
         <div class="hero-inner">
           <div class="hero-content">
             <div class="hero-badge">
-              <i class="ri-shield-check-fill"></i>
-              ISO 27001 Compliant · 24×7 Support
+              <i class="ri-award-fill"></i>
+              24+ Years of Excellence · Trusted IT Partner
             </div>
-            <h1>Enterprise <span>IT Solutions</span> for Modern Business</h1>
+            <h1>Trusted <span>IT Support & AMC</span> Services Provider</h1>
             <p class="hero-description">
-              Transform your IT infrastructure with our comprehensive managed services. We deliver secure, scalable, and high-performing solutions across Ghaziabad, Delhi, Noida, and NCR.
+              Omnet IT System delivers reliable technology solutions to businesses of all sizes. With over 24 years of industry experience, we specialize in IT Infrastructure Support, Computer AMC, Laptop & Printer Sales, Rental, and Services across Delhi NCR.
             </p>
             <div class="hero-buttons">
               <a href="contact.html" class="btn btn-primary">
-                <i class="ri-rocket-line"></i>
-                Start Your Project
+                <i class="ri-phone-fill"></i>
+                Get Free Quote
               </a>
               <a href="services.html" class="btn btn-secondary">
                 <i class="ri-arrow-right-line"></i>
-                Explore Services
+                Our Services
               </a>
             </div>
             <div class="hero-stats">
               <div class="stat-item">
-                <div class="stat-number">99.9%</div>
-                <div class="stat-label">Uptime Guarantee</div>
+                <div class="stat-number">24+</div>
+                <div class="stat-label">Years Experience</div>
               </div>
               <div class="stat-item">
                 <div class="stat-number">500+</div>
@@ -1114,7 +1330,7 @@
               </div>
               <div class="stat-item">
                 <div class="stat-number">24/7</div>
-                <div class="stat-label">Expert Support</div>
+                <div class="stat-label">Support Available</div>
               </div>
             </div>
           </div>
@@ -1281,6 +1497,133 @@
               <i class="ri-file-list-3-line"></i>
               Request Free Quote
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IT Services Portfolio Section -->
+    <section class="portfolio-section">
+      <div class="container">
+        <div class="portfolio-header">
+          <h2>Our IT <span>Services Portfolio</span></h2>
+          <p>Comprehensive technology solutions for businesses of all sizes - from startups to enterprises</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- IT Support & AMC -->
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="ri-tools-fill"></i>
+            </div>
+            <h3>💻 IT Support & AMC</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> Desktop & Laptop AMC</li>
+              <li><i class="ri-check-line"></i> Network & Server Support</li>
+              <li><i class="ri-check-line"></i> IT Infrastructure Maintenance</li>
+              <li><i class="ri-check-line"></i> Preventive & Breakdown Support</li>
+            </ul>
+          </div>
+
+          <!-- Computer, Laptop & Printer -->
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="ri-computer-fill"></i>
+            </div>
+            <h3>🖥 Sales & Services</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> Computer & Laptop Sales</li>
+              <li><i class="ri-check-line"></i> Printer Sales & Support</li>
+              <li><i class="ri-check-line"></i> Hardware Repair & Replacement</li>
+              <li><i class="ri-check-line"></i> Spare Parts & Accessories</li>
+            </ul>
+          </div>
+
+          <!-- IT Equipment Rental -->
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="ri-swap-box-fill"></i>
+            </div>
+            <h3>🔁 IT Equipment Rental</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> Computer & Laptop Rental</li>
+              <li><i class="ri-check-line"></i> Printer Rental for Projects</li>
+              <li><i class="ri-check-line"></i> Short-term Rental Plans</li>
+              <li><i class="ri-check-line"></i> Long-term Rental Plans</li>
+            </ul>
+          </div>
+
+          <!-- Network & Security -->
+          <div class="portfolio-card">
+            <div class="portfolio-icon">
+              <i class="ri-shield-keyhole-fill"></i>
+            </div>
+            <h3>🌐 Network & Security</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> LAN / WAN Setup & Maintenance</li>
+              <li><i class="ri-check-line"></i> Firewall & Network Security</li>
+              <li><i class="ri-check-line"></i> Data Backup & Recovery</li>
+              <li><i class="ri-check-line"></i> Antivirus Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+      <div class="container">
+        <div class="why-choose-header">
+          <h2>Why Choose <span>Omnet IT System</span>?</h2>
+        </div>
+
+        <div class="why-choose-grid">
+          <div class="why-choose-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>One-Stop IT Solution Provider</span>
+          </div>
+          <div class="why-choose-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Customized AMC Plans</span>
+          </div>
+          <div class="why-choose-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Preventive & Breakdown Maintenance</span>
+          </div>
+          <div class="why-choose-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Experienced & Certified IT Engineers</span>
+          </div>
+          <div class="why-choose-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Fast Remote & Onsite Support</span>
+          </div>
+          <div class="why-choose-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Pan-Delhi NCR Service Coverage</span>
+          </div>
+        </div>
+
+        <div class="strengths-grid">
+          <div class="strength-item">
+            <div class="strength-number">1</div>
+            <p>Gold Standard Customer Service</p>
+          </div>
+          <div class="strength-item">
+            <div class="strength-number">2</div>
+            <p>Focus on Cost Efficiency & Quality</p>
+          </div>
+          <div class="strength-item">
+            <div class="strength-number">3</div>
+            <p>Fully GST-Compliant Organization</p>
+          </div>
+          <div class="strength-item">
+            <div class="strength-number">4</div>
+            <p>Structured Helpdesk & Escalation</p>
+          </div>
+          <div class="strength-item">
+            <div class="strength-number">5</div>
+            <p>Client Feedback After Every Call</p>
           </div>
         </div>
       </div>

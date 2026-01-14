@@ -633,6 +633,195 @@
         color: var(--text-secondary);
       }
 
+      /* AMC Scope Section */
+      .amc-scope-section {
+        padding: 100px 0;
+        background: var(--bg-light);
+      }
+
+      .amc-scope-header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+      }
+
+      .amc-scope-header h2 {
+        font-size: 36px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 16px;
+      }
+
+      .amc-scope-header h2 span {
+        color: var(--primary);
+      }
+
+      .amc-scope-header p {
+        color: var(--text-secondary);
+      }
+
+      .amc-scope-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+      }
+
+      .scope-card {
+        background: white;
+        border-radius: 16px;
+        padding: 28px 20px;
+        text-align: center;
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+      }
+
+      .scope-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .scope-icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(37, 99, 235, 0.1);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 28px;
+        margin: 0 auto 16px;
+      }
+
+      .scope-card h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 12px;
+      }
+
+      .scope-card ul {
+        text-align: left;
+      }
+
+      .scope-card ul li {
+        font-size: 13px;
+        color: var(--text-secondary);
+        padding: 4px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        line-height: 1.4;
+      }
+
+      .scope-card ul li i {
+        color: var(--success);
+        font-size: 14px;
+        margin-top: 2px;
+      }
+
+      /* Helpdesk Section */
+      .helpdesk-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .helpdesk-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .helpdesk-content h2 {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 20px;
+      }
+
+      .helpdesk-content h2 span {
+        color: var(--primary);
+      }
+
+      .helpdesk-content p {
+        color: var(--text-secondary);
+        margin-bottom: 24px;
+        line-height: 1.7;
+      }
+
+      .helpdesk-features {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .helpdesk-feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--bg-light);
+        padding: 12px 20px;
+        border-radius: 10px;
+      }
+
+      .helpdesk-feature i {
+        color: var(--primary);
+        font-size: 20px;
+      }
+
+      .helpdesk-feature span {
+        font-weight: 600;
+        color: var(--secondary);
+      }
+
+      .helpdesk-visual {
+        background: var(--gradient-primary);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        color: white;
+      }
+
+      .helpdesk-visual h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      .helpdesk-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .helpdesk-cta a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 24px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .helpdesk-cta .btn-white {
+        background: white;
+        color: var(--primary);
+      }
+
+      .helpdesk-cta .btn-outline {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+
+      .helpdesk-cta a:hover {
+        transform: translateY(-2px);
+      }
+
       /* CTA Section */
       .cta {
         padding: 100px 0;
@@ -864,6 +1053,15 @@
           grid-template-columns: repeat(2, 1fr);
           gap: 40px;
         }
+
+        .amc-scope-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .helpdesk-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
       }
 
       @media (max-width: 768px) {
@@ -913,6 +1111,22 @@
           flex-direction: column;
           gap: 16px;
           text-align: center;
+        }
+
+        .amc-scope-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .amc-scope-header h2 {
+          font-size: 28px;
+        }
+
+        .helpdesk-content h2 {
+          font-size: 26px;
+        }
+
+        .helpdesk-features {
+          flex-direction: column;
         }
       }
     </style>
@@ -973,8 +1187,8 @@
             <i class="ri-arrow-right-s-line"></i>
             <span>Services</span>
           </div>
-          <h1>Our <span>IT Services</span></h1>
-          <p>Comprehensive technology solutions designed to drive your business forward with security, reliability, and innovation.</p>
+          <h1>IT Support & <span>AMC Services</span></h1>
+          <p>With 24+ years of experience, Omnet IT System delivers reliable IT Infrastructure Support, Computer AMC, Sales, Rental, and Services across Delhi NCR.</p>
         </div>
       </div>
     </section>
@@ -1225,7 +1439,7 @@
                 </div>
                 <div class="featured-stat">
                   <i class="ri-award-line"></i>
-                  <h4>10+</h4>
+                  <h4>24+</h4>
                   <p>Years Experience</p>
                 </div>
               </div>
@@ -1267,6 +1481,129 @@
             <div class="process-number">4</div>
             <h3>Support</h3>
             <p>Ongoing monitoring, maintenance, and support to ensure optimal performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMC Scope Section -->
+    <section class="amc-scope-section">
+      <div class="container">
+        <div class="amc-scope-header">
+          <h2>Indicative Scope of <span>IT AMC Services</span></h2>
+          <p>Our IT AMC Services are available for small, medium, and large offices. The scope is fully customizable based on your requirements.</p>
+        </div>
+
+        <div class="amc-scope-grid">
+          <!-- Desktop & Laptop Support -->
+          <div class="scope-card">
+            <div class="scope-icon">
+              <i class="ri-computer-line"></i>
+            </div>
+            <h3>Desktop & Laptop Support</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> OS installation & configuration</li>
+              <li><i class="ri-check-line"></i> Hardware troubleshooting</li>
+              <li><i class="ri-check-line"></i> Performance optimization</li>
+              <li><i class="ri-check-line"></i> Antivirus & security updates</li>
+            </ul>
+          </div>
+
+          <!-- Network & Server Support -->
+          <div class="scope-card">
+            <div class="scope-icon">
+              <i class="ri-server-line"></i>
+            </div>
+            <h3>Network & Server Support</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> Router, switch & firewall support</li>
+              <li><i class="ri-check-line"></i> Network monitoring</li>
+              <li><i class="ri-check-line"></i> Server health checks</li>
+              <li><i class="ri-check-line"></i> Troubleshooting & fixes</li>
+            </ul>
+          </div>
+
+          <!-- Printer Support -->
+          <div class="scope-card">
+            <div class="scope-icon">
+              <i class="ri-printer-line"></i>
+            </div>
+            <h3>Printer Support</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> Printer installation & config</li>
+              <li><i class="ri-check-line"></i> Cartridge & toner support</li>
+              <li><i class="ri-check-line"></i> Hardware fault diagnosis</li>
+              <li><i class="ri-check-line"></i> Network printer setup</li>
+            </ul>
+          </div>
+
+          <!-- IT Security -->
+          <div class="scope-card">
+            <div class="scope-icon">
+              <i class="ri-shield-check-line"></i>
+            </div>
+            <h3>IT Security</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> Antivirus management</li>
+              <li><i class="ri-check-line"></i> Data backup support</li>
+              <li><i class="ri-check-line"></i> Access & user management</li>
+              <li><i class="ri-check-line"></i> Security policy setup</li>
+            </ul>
+          </div>
+
+          <!-- Preventive Maintenance -->
+          <div class="scope-card">
+            <div class="scope-icon">
+              <i class="ri-tools-line"></i>
+            </div>
+            <h3>Preventive Maintenance</h3>
+            <ul>
+              <li><i class="ri-check-line"></i> Regular system health checks</li>
+              <li><i class="ri-check-line"></i> Scheduled visits per plan</li>
+              <li><i class="ri-check-line"></i> Documentation & reporting</li>
+              <li><i class="ri-check-line"></i> Performance optimization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Helpdesk Section -->
+    <section class="helpdesk-section">
+      <div class="container">
+        <div class="helpdesk-grid">
+          <div class="helpdesk-content">
+            <h2>Centralized IT <span>Helpdesk Support</span></h2>
+            <p>Omnet IT System provides dedicated centralized Helpdesk Support for all AMC clients. Our structured support system ensures quick issue resolution through multiple channels.</p>
+            <p>Contact details are shared with Admin Managers, Facility Managers, and IT Coordinators at client locations for seamless communication.</p>
+            <div class="helpdesk-features">
+              <div class="helpdesk-feature">
+                <i class="ri-remote-control-line"></i>
+                <span>Remote Support</span>
+              </div>
+              <div class="helpdesk-feature">
+                <i class="ri-map-pin-user-line"></i>
+                <span>Onsite Support</span>
+              </div>
+              <div class="helpdesk-feature">
+                <i class="ri-arrow-up-circle-line"></i>
+                <span>Escalation Model</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="helpdesk-visual">
+            <h3>📞 Get Customized AMC Proposal</h3>
+            <div class="helpdesk-cta">
+              <a href="tel:+919717270865" class="btn-white">
+                <i class="ri-phone-fill"></i>
+                Call: +91-97172-70865
+              </a>
+              <a href="contact.html" class="btn-outline">
+                <i class="ri-mail-send-line"></i>
+                Request Free Quote
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1379,4 +1716,15 @@
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', () => {
         if (window.scrollY > 500) {
-          backToTop.classList.add
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
