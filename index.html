@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Meta Tags -->
-    <title>OMNET IT SYSTEM | Enterprise IT Solutions Ghaziabad Delhi Noida | Managed Services Partner</title>
-    <meta name="description" content="OMNET IT SYSTEM delivers enterprise IT solutions and managed services across Ghaziabad, Delhi, Noida, Greater Noida, and Gurgaon. 24×7 support, cloud solutions, cybersecurity, infrastructure management, and digital workplace services for businesses. ISO 27001 compliant with 99.9% uptime focus." />
-    <meta name="keywords" content="enterprise IT solutions Ghaziabad, managed IT services Delhi, cloud solutions Noida, cybersecurity services, infrastructure management, digital workplace, IT consulting India" />
+    <title>OMNET IT SYSTEM | Best Computer AMC Services in Delhi NCR | IT Support & Solutions</title>
+    <meta name="description" content="Omnet IT System - 24+ years trusted IT Support & AMC Services provider in Delhi NCR. Desktop, Laptop, Network AMC, IT Infrastructure Support, Computer Sales & Rental. Serving Noida, Greater Noida, Gurugram, Faridabad & Delhi." />
+    <meta name="keywords" content="Computer AMC Services Delhi NCR, IT Support Noida, Laptop AMC, Network AMC, IT Infrastructure, Computer Rental, Printer AMC, IT Services Ghaziabad" />
     <link rel="canonical" href="https://omnetitsystem.com/" />
     
     <!-- Font Awesome -->
@@ -23,7 +23,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <style>
-      /* CSS Variables */
       :root {
         --primary: #2563eb;
         --primary-dark: #1d4ed8;
@@ -45,17 +44,8 @@
         --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
       }
 
-      /* Reset & Base */
-      *, *::before, *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
       body {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         color: var(--text-primary);
@@ -63,27 +53,10 @@
         background: var(--bg-white);
         overflow-x: hidden;
       }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-        transition: color 0.3s ease;
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
+      a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+      ul { list-style: none; }
+      img { max-width: 100%; height: auto; }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
       /* Buttons */
       .btn {
@@ -97,41 +70,17 @@
         cursor: pointer;
         transition: all 0.3s ease;
         border: none;
-        text-transform: none;
       }
-
       .btn-primary {
         background: var(--gradient-primary);
         color: white;
         box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.4);
       }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5);
-      }
-
-      .btn-secondary {
-        background: transparent;
-        color: var(--primary);
-        border: 2px solid var(--primary);
-      }
-
-      .btn-secondary:hover {
-        background: var(--primary);
-        color: white;
-      }
-
-      .btn-white {
-        background: white;
-        color: var(--primary);
-        box-shadow: var(--shadow);
-      }
-
-      .btn-white:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-lg);
-      }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5); }
+      .btn-secondary { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+      .btn-secondary:hover { background: var(--primary); color: white; }
+      .btn-white { background: white; color: var(--primary); box-shadow: var(--shadow); }
+      .btn-white:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 
       /* Header */
       .header {
@@ -145,27 +94,9 @@
         border-bottom: 1px solid var(--border);
         transition: all 0.3s ease;
       }
-
-      .header.scrolled {
-        box-shadow: var(--shadow);
-      }
-
-      .header-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 80px;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-size: 24px;
-        font-weight: 800;
-        color: var(--secondary);
-      }
-
+      .header.scrolled { box-shadow: var(--shadow); }
+      .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
+      .logo { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 800; color: var(--secondary); }
       .logo-icon {
         width: 45px;
         height: 45px;
@@ -177,408 +108,188 @@
         color: white;
         font-size: 20px;
       }
+      .logo span { color: var(--primary); }
+      .nav { display: flex; align-items: center; gap: 40px; }
+      .nav-links { display: flex; gap: 32px; }
+      .nav-links a { font-weight: 500; color: var(--text-secondary); position: relative; padding: 8px 0; }
+      .nav-links a.active { color: var(--primary); }
+      .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--primary); transition: width 0.3s ease; }
+      .nav-links a.active::after { width: 100%; }
+      .nav-links a:hover { color: var(--primary); }
+      .nav-links a:hover::after { width: 100%; }
+      .nav-cta { display: flex; align-items: center; gap: 16px; }
+      .nav-phone { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--text-primary); }
+      .nav-phone i { color: var(--primary); }
+      .mobile-menu-btn { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-primary); }
+      .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; background: white; padding: 24px; box-shadow: var(--shadow-lg); z-index: 999; }
+      .mobile-menu.active { display: block; }
+      .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--text-primary); border-bottom: 1px solid var(--border); }
 
-      .logo span {
-        color: var(--primary);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 32px;
-      }
-
-      .nav-links a {
-        font-weight: 500;
-        color: var(--text-secondary);
-        position: relative;
-        padding: 8px 0;
-      }
-
-      .nav-links a.active {
-        color: var(--primary);
-      }
-
-      .nav-links a::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: var(--primary);
-        transition: width 0.3s ease;
-      }
-
-      .nav-links a.active::after {
-        width: 100%;
-      }
-
-      .nav-links a:hover {
-        color: var(--primary);
-      }
-
-      .nav-links a:hover::after {
-        width: 100%;
-      }
-
-      .nav-cta {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .nav-phone {
-        display: flex;
+      /* Section Header */
+      .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+      .section-badge {
+        display: inline-flex;
         align-items: center;
         gap: 8px;
-        font-weight: 600;
-        color: var(--text-primary);
-      }
-
-      .nav-phone i {
+        background: rgba(37, 99, 235, 0.1);
         color: var(--primary);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 16px;
       }
+      .section-header h2 { font-size: 36px; font-weight: 800; color: var(--secondary); margin-bottom: 16px; }
+      .section-header h2 span { color: var(--primary); }
+      .section-header p { color: var(--text-secondary); font-size: 16px; }
 
-      /* Social Media Icons in Header */
-      .header-social {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .header-social a {
-        width: 36px;
-        height: 36px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        background: var(--bg-light);
-        color: var(--text-secondary);
-        font-size: 16px;
-        transition: all 0.3s ease;
-      }
-
-      .header-social a:hover {
-        background: var(--primary);
-        color: white;
-        transform: translateY(-2px);
-      }
-
-      .mobile-menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--text-primary);
-      }
-
-      /* Hero Section */
+      /* ==================== */
+      /* SECTION 1: HERO */
+      /* ==================== */
       .hero {
-        padding: 160px 0 100px;
-        background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        padding: 140px 0 80px;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         position: relative;
         overflow: hidden;
       }
-
       .hero::before {
         content: '';
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-        opacity: 0.5;
+        top: -50%;
+        right: -20%;
+        width: 80%;
+        height: 150%;
+        background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+        pointer-events: none;
       }
-
-      .hero-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-        position: relative;
-      }
-
-      .hero-content {
-        max-width: 600px;
-      }
-
+      .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
       .hero-badge {
         display: inline-flex;
         align-items: center;
         gap: 8px;
         background: rgba(37, 99, 235, 0.1);
         color: var(--primary);
-        padding: 8px 16px;
+        padding: 10px 20px;
         border-radius: 50px;
         font-size: 14px;
         font-weight: 600;
         margin-bottom: 24px;
       }
-
-      .hero-badge i {
-        font-size: 12px;
-      }
-
-      .hero h1 {
-        font-size: 52px;
-        font-weight: 800;
-        line-height: 1.1;
-        color: var(--secondary);
-        margin-bottom: 24px;
-      }
-
-      .hero h1 span {
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .hero-description {
-        font-size: 18px;
-        color: var(--text-secondary);
-        margin-bottom: 32px;
-        line-height: 1.7;
-      }
-
-      .hero-buttons {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 48px;
-      }
-
-      .hero-stats {
-        display: flex;
-        gap: 48px;
-      }
-
-      .stat-item {
-        text-align: left;
-      }
-
-      .stat-number {
-        font-size: 36px;
-        font-weight: 800;
-        color: var(--primary);
-        line-height: 1;
-      }
-
-      .stat-label {
-        font-size: 14px;
-        color: var(--text-secondary);
-        margin-top: 4px;
-      }
-
-      .hero-visual {
-        position: relative;
-      }
-
-      .hero-image-container {
-        position: relative;
-        background: var(--gradient-primary);
-        border-radius: 24px;
-        padding: 40px;
-        box-shadow: var(--shadow-xl);
-      }
-
-      .hero-illustration {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-
+      .hero h1 { font-size: 48px; font-weight: 800; color: var(--secondary); line-height: 1.1; margin-bottom: 24px; }
+      .hero h1 span { color: var(--primary); }
+      .hero-description { font-size: 18px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 32px; }
+      .hero-buttons { display: flex; gap: 16px; margin-bottom: 40px; }
+      .hero-stats { display: flex; gap: 40px; }
+      .stat-item { text-align: center; }
+      .stat-number { font-size: 36px; font-weight: 800; color: var(--primary); }
+      .stat-label { font-size: 14px; color: var(--text-secondary); font-weight: 500; }
+      .hero-visual { position: relative; }
+      .hero-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .hero-card {
-        background: rgba(255, 255, 255, 0.95);
-        padding: 24px;
+        background: white;
         border-radius: 16px;
+        padding: 24px;
         text-align: center;
         box-shadow: var(--shadow);
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border);
       }
+      .hero-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--primary); }
+      .hero-card i { font-size: 32px; color: var(--primary); margin-bottom: 12px; }
+      .hero-card h4 { font-size: 14px; font-weight: 600; color: var(--secondary); }
 
-      .hero-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .hero-card i {
-        font-size: 32px;
-        color: var(--primary);
-        margin-bottom: 12px;
-      }
-
-      .hero-card h4 {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--secondary);
-      }
-
-      .floating-badge {
-        position: absolute;
+      /* ==================== */
+      /* SECTION 2: ABOUT */
+      /* ==================== */
+      .about-section {
+        padding: 100px 0;
         background: white;
-        padding: 16px 20px;
+      }
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+      .about-content h2 { font-size: 36px; font-weight: 800; color: var(--secondary); margin-bottom: 20px; }
+      .about-content h2 span { color: var(--primary); }
+      .about-content p { color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8; }
+      .about-highlights { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 30px; }
+      .highlight-box {
+        background: var(--bg-light);
         border-radius: 12px;
-        box-shadow: var(--shadow-lg);
+        padding: 20px;
         display: flex;
         align-items: center;
         gap: 12px;
-        animation: float 3s ease-in-out infinite;
       }
-
-      .floating-badge.badge-1 {
-        top: -20px;
-        right: -20px;
-      }
-
-      .floating-badge.badge-2 {
-        bottom: -20px;
-        left: -20px;
-        animation-delay: 1.5s;
-      }
-
-      .floating-badge i {
-        font-size: 24px;
-        color: var(--success);
-      }
-
-      .floating-badge span {
-        font-weight: 600;
-        font-size: 14px;
-        color: var(--text-primary);
-      }
-
-      @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-
-      /* CTA Section */
-      .cta {
-        padding: 100px 0;
-        background: var(--gradient-dark);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .cta::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-      }
-
-      .cta-inner {
+      .highlight-box i { font-size: 24px; color: var(--success); }
+      .highlight-box span { font-weight: 600; color: var(--secondary); font-size: 14px; }
+      .about-visual { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .about-stat-card {
+        background: var(--gradient-primary);
+        border-radius: 16px;
+        padding: 30px;
         text-align: center;
-        position: relative;
-        z-index: 1;
-      }
-
-      .cta h2 {
-        font-size: 42px;
-        font-weight: 800;
         color: white;
-        margin-bottom: 20px;
       }
+      .about-stat-card.light { background: var(--bg-light); color: var(--secondary); }
+      .about-stat-card h3 { font-size: 42px; font-weight: 800; margin-bottom: 8px; }
+      .about-stat-card.light h3 { color: var(--primary); }
+      .about-stat-card p { font-size: 14px; opacity: 0.9; }
 
-      .cta p {
-        font-size: 18px;
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 600px;
-        margin: 0 auto 40px;
-      }
-
-      .cta-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-      }
-
-      /* AMC Services Section */
-      .amc-section {
+      /* ==================== */
+      /* SECTION 3: SERVICES PORTFOLIO */
+      /* ==================== */
+      .services-section {
         padding: 100px 0;
         background: var(--bg-light);
       }
-
-      .amc-header {
-        text-align: center;
-        max-width: 900px;
-        margin: 0 auto 60px;
-      }
-
-      .amc-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(37, 99, 235, 0.1);
-        color: var(--primary);
-        padding: 8px 16px;
-        border-radius: 50px;
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 20px;
-      }
-
-      .amc-header h2 {
-        font-size: 42px;
-        font-weight: 800;
-        color: var(--secondary);
-        margin-bottom: 16px;
-        line-height: 1.2;
-      }
-
-      .amc-header h2 span {
-        color: var(--primary);
-      }
-
-      .amc-header .subtitle {
-        font-size: 18px;
-        color: var(--text-secondary);
-        margin-bottom: 16px;
-        font-weight: 500;
-      }
-
-      .amc-header .description {
-        font-size: 16px;
-        color: var(--text-secondary);
-        line-height: 1.7;
-      }
-
-      .amc-services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        margin-bottom: 50px;
-      }
-
-      .amc-service-card {
+      .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+      .service-card {
         background: white;
         border-radius: 16px;
-        padding: 32px;
+        padding: 30px;
+        text-align: center;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-sm);
+      }
+      .service-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+      .service-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--gradient-primary);
+        border-radius: 16px;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 30px;
+        margin: 0 auto 20px;
+      }
+      .service-card h3 { font-size: 18px; font-weight: 700; color: var(--secondary); margin-bottom: 12px; }
+      .service-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+      /* ==================== */
+      /* SECTION 4: AMC SERVICES */
+      /* ==================== */
+      .amc-section {
+        padding: 100px 0;
+        background: white;
+      }
+      .amc-header { text-align: center; max-width: 800px; margin: 0 auto 60px; }
+      .amc-header h2 { font-size: 36px; font-weight: 800; color: var(--secondary); margin-bottom: 16px; }
+      .amc-header h2 span { color: var(--primary); }
+      .amc-header .subtitle { font-size: 18px; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
+      .amc-header p { color: var(--text-secondary); }
+      .amc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 50px; }
+      .amc-card {
+        background: var(--bg-light);
+        border-radius: 16px;
+        padding: 30px;
+        display: flex;
         gap: 20px;
         transition: all 0.3s ease;
         border: 1px solid var(--border);
       }
-
-      .amc-service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary);
-      }
-
-      .amc-service-icon {
+      .amc-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+      .amc-card-icon {
         width: 60px;
         height: 60px;
         min-width: 60px;
@@ -588,281 +299,63 @@
         align-items: center;
         justify-content: center;
         color: var(--primary);
-        font-size: 28px;
+        font-size: 26px;
       }
-
-      .amc-service-content h3 {
-        font-size: 18px;
-        font-weight: 700;
-        color: var(--secondary);
-        margin-bottom: 8px;
-      }
-
-      .amc-service-content p {
-        font-size: 14px;
-        color: var(--text-secondary);
-        line-height: 1.6;
-      }
-
-      .amc-features {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        margin-bottom: 50px;
-      }
-
+      .amc-card h3 { font-size: 17px; font-weight: 700; color: var(--secondary); margin-bottom: 8px; }
+      .amc-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+      .amc-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; }
       .amc-feature {
-        background: white;
+        background: var(--gradient-primary);
         border-radius: 12px;
         padding: 24px;
         text-align: center;
-        border: 2px solid var(--border);
-        transition: all 0.3s ease;
-      }
-
-      .amc-feature:hover {
-        border-color: var(--primary);
-        background: rgba(37, 99, 235, 0.02);
-      }
-
-      .amc-feature-icon {
-        width: 50px;
-        height: 50px;
-        background: var(--gradient-primary);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         color: white;
-        font-size: 22px;
-        margin: 0 auto 16px;
       }
-
-      .amc-feature h4 {
-        font-size: 15px;
-        font-weight: 700;
-        color: var(--secondary);
-        margin-bottom: 6px;
-      }
-
-      .amc-feature p {
-        font-size: 13px;
-        color: var(--text-secondary);
-      }
-
+      .amc-feature i { font-size: 28px; margin-bottom: 12px; }
+      .amc-feature h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+      .amc-feature p { font-size: 13px; opacity: 0.9; }
       .amc-cta {
-        text-align: center;
-        background: var(--gradient-primary);
+        background: var(--gradient-dark);
         border-radius: 20px;
         padding: 40px;
-        color: white;
-      }
-
-      .amc-cta h3 {
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 24px;
-      }
-
-      .amc-cta-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .amc-cta .btn-white {
-        background: white;
-        color: var(--primary);
-        font-weight: 700;
-      }
-
-      .amc-cta .btn-outline {
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-        padding: 14px 28px;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 15px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-      }
-
-      .amc-cta .btn-outline:hover {
-        background: white;
-        color: var(--primary);
-      }
-
-      /* IT Services Portfolio Section */
-      .portfolio-section {
-        padding: 100px 0;
-        background: white;
-      }
-
-      .portfolio-header {
         text-align: center;
-        max-width: 800px;
-        margin: 0 auto 60px;
-      }
-
-      .portfolio-header h2 {
-        font-size: 38px;
-        font-weight: 800;
-        color: var(--secondary);
-        margin-bottom: 16px;
-      }
-
-      .portfolio-header h2 span {
-        color: var(--primary);
-      }
-
-      .portfolio-header p {
-        font-size: 16px;
-        color: var(--text-secondary);
-      }
-
-      .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
-      }
-
-      .portfolio-card {
-        background: var(--bg-light);
-        border-radius: 16px;
-        padding: 32px 24px;
-        text-align: center;
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-      }
-
-      .portfolio-card:hover {
-        border-color: var(--primary);
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .portfolio-icon {
-        width: 70px;
-        height: 70px;
-        background: var(--gradient-primary);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         color: white;
-        font-size: 32px;
-        margin: 0 auto 20px;
       }
+      .amc-cta h3 { font-size: 24px; font-weight: 700; margin-bottom: 24px; }
+      .amc-cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-      .portfolio-card h3 {
-        font-size: 18px;
-        font-weight: 700;
-        color: var(--secondary);
-        margin-bottom: 16px;
-      }
-
-      .portfolio-card ul {
-        text-align: left;
-      }
-
-      .portfolio-card ul li {
-        font-size: 14px;
-        color: var(--text-secondary);
-        padding: 6px 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .portfolio-card ul li i {
-        color: var(--primary);
-        font-size: 16px;
-      }
-
-      /* Why Choose Us Section */
-      .why-choose-section {
+      /* ==================== */
+      /* SECTION 5: WHY CHOOSE US */
+      /* ==================== */
+      .why-section {
         padding: 100px 0;
         background: var(--bg-light);
       }
-
-      .why-choose-header {
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto 60px;
-      }
-
-      .why-choose-header h2 {
-        font-size: 38px;
-        font-weight: 800;
-        color: var(--secondary);
-        margin-bottom: 16px;
-      }
-
-      .why-choose-header h2 span {
-        color: var(--primary);
-      }
-
-      .why-choose-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        margin-bottom: 50px;
-      }
-
-      .why-choose-card {
+      .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+      .why-card {
         background: white;
         border-radius: 12px;
-        padding: 24px;
+        padding: 20px 24px;
         display: flex;
         align-items: center;
-        gap: 16px;
-        transition: all 0.3s ease;
+        gap: 14px;
         border: 1px solid var(--border);
+        transition: all 0.3s ease;
       }
-
-      .why-choose-card:hover {
-        box-shadow: var(--shadow-lg);
-        border-color: var(--primary);
-      }
-
-      .why-choose-card i {
-        font-size: 24px;
-        color: var(--success);
-      }
-
-      .why-choose-card span {
-        font-size: 15px;
-        font-weight: 600;
-        color: var(--secondary);
-      }
-
-      .strengths-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 16px;
-      }
-
-      .strength-item {
+      .why-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
+      .why-card i { font-size: 24px; color: var(--success); }
+      .why-card span { font-weight: 600; color: var(--secondary); }
+      .strengths-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+      .strength-box {
         background: white;
         border-radius: 12px;
         padding: 24px 16px;
         text-align: center;
         border: 1px solid var(--border);
-        transition: all 0.3s ease;
       }
-
-      .strength-item:hover {
-        border-color: var(--primary);
-        background: rgba(37, 99, 235, 0.02);
-      }
-
-      .strength-number {
-        width: 40px;
-        height: 40px;
+      .strength-num {
+        width: 36px;
+        height: 36px;
         background: var(--gradient-primary);
         border-radius: 50%;
         display: flex;
@@ -870,182 +363,73 @@
         justify-content: center;
         color: white;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 14px;
         margin: 0 auto 12px;
       }
+      .strength-box p { font-size: 13px; color: var(--text-secondary); }
 
-      .strength-item p {
-        font-size: 13px;
-        color: var(--text-secondary);
-        line-height: 1.5;
-      }
-
-      /* Social Connect Section */
-      .social-connect {
-        padding: 60px 0;
-        background: var(--gradient-dark);
+      /* ==================== */
+      /* SECTION 6: CTA */
+      /* ==================== */
+      .cta-section {
+        padding: 80px 0;
+        background: var(--gradient-primary);
         text-align: center;
       }
+      .cta-section h2 { font-size: 36px; font-weight: 800; color: white; margin-bottom: 16px; }
+      .cta-section p { color: rgba(255,255,255,0.9); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
+      .cta-buttons { display: flex; gap: 16px; justify-content: center; }
 
-      .social-connect h2 {
-        font-size: 28px;
-        font-weight: 800;
-        color: white;
-        margin-bottom: 12px;
+      /* ==================== */
+      /* SECTION 7: SOCIAL */
+      /* ==================== */
+      .social-section {
+        padding: 60px 0;
+        background: var(--secondary);
+        text-align: center;
       }
-
-      .social-connect p {
-        color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 32px;
-      }
-
-      .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-      }
-
+      .social-section h2 { font-size: 24px; font-weight: 700; color: white; margin-bottom: 8px; }
+      .social-section p { color: rgba(255,255,255,0.7); margin-bottom: 24px; }
+      .social-links { display: flex; justify-content: center; gap: 16px; }
       .social-link {
-        width: 56px;
-        height: 56px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 14px;
+        width: 50px;
+        height: 50px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 24px;
+        font-size: 22px;
         transition: all 0.3s ease;
       }
+      .social-link:hover { transform: translateY(-3px); }
+      .social-link.linkedin:hover { background: #0077b5; }
+      .social-link.twitter:hover { background: #1da1f2; }
+      .social-link.facebook:hover { background: #1877f2; }
 
-      .social-link:hover {
-        background: var(--primary);
-        transform: translateY(-5px);
-      }
-
-      .social-link.linkedin:hover {
-        background: #0077b5;
-      }
-
-      .social-link.linkedin.personal {
-        border: 2px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .social-link.linkedin.personal:hover {
-        background: #0077b5;
-        border-color: transparent;
-      }
-
-      .social-link.twitter:hover {
-        background: #1da1f2;
-      }
-
-      .social-link.facebook:hover {
-        background: #1877f2;
-      }
-
-      /* Footer */
+      /* ==================== */
+      /* FOOTER */
+      /* ==================== */
       .footer {
         background: var(--secondary);
         color: rgba(255, 255, 255, 0.8);
-        padding: 80px 0 0;
+        padding: 60px 0 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
       }
-
-      .footer-inner {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        gap: 60px;
-        padding-bottom: 60px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .footer-brand .logo {
-        color: white;
-        margin-bottom: 20px;
-      }
-
-      .footer-brand .logo-icon {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .footer-brand .logo span {
-        color: var(--accent);
-      }
-
-      .footer-brand p {
-        margin-bottom: 24px;
-        line-height: 1.7;
-      }
-
-      .footer-social {
-        display: flex;
-        gap: 12px;
-      }
-
-      .footer-social a {
-        width: 42px;
-        height: 42px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        transition: all 0.3s ease;
-      }
-
-      .footer-social a:hover {
-        background: var(--primary);
-        transform: translateY(-3px);
-      }
-
-      .footer-links h4 {
-        color: white;
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 24px;
-      }
-
-      .footer-links ul {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .footer-links a {
-        color: rgba(255, 255, 255, 0.7);
-        transition: all 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: var(--accent);
-        padding-left: 5px;
-      }
-
-      .footer-bottom {
-        padding: 24px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .footer-bottom p {
-        font-size: 14px;
-      }
-
-      .footer-bottom-links {
-        display: flex;
-        gap: 24px;
-      }
-
-      .footer-bottom-links a {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.7);
-      }
-
-      .footer-bottom-links a:hover {
-        color: var(--accent);
-      }
+      .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; padding-bottom: 50px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .footer-brand .logo { color: white; margin-bottom: 16px; }
+      .footer-brand .logo-icon { background: rgba(255,255,255,0.1); }
+      .footer-brand .logo span { color: var(--accent); }
+      .footer-brand p { line-height: 1.7; font-size: 14px; }
+      .footer-links h4 { color: white; font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+      .footer-links ul { display: flex; flex-direction: column; gap: 10px; }
+      .footer-links a { color: rgba(255,255,255,0.7); font-size: 14px; transition: all 0.3s ease; }
+      .footer-links a:hover { color: var(--accent); padding-left: 5px; }
+      .footer-bottom { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+      .footer-bottom p { font-size: 14px; }
+      .footer-bottom-links { display: flex; gap: 24px; }
+      .footer-bottom-links a { font-size: 14px; color: rgba(255,255,255,0.7); }
 
       /* Back to Top */
       .back-to-top {
@@ -1068,189 +452,49 @@
         box-shadow: var(--shadow-lg);
         z-index: 999;
       }
+      .back-to-top.visible { opacity: 1; visibility: visible; }
+      .back-to-top:hover { transform: translateY(-5px); }
 
-      .back-to-top.visible {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .back-to-top:hover {
-        transform: translateY(-5px);
-      }
-
-      /* Mobile Menu */
-      .mobile-menu {
-        display: none;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 24px;
-        box-shadow: var(--shadow-lg);
-        z-index: 999;
-      }
-
-      .mobile-menu.active {
-        display: block;
-      }
-
-      .mobile-menu a {
-        display: block;
-        padding: 12px 0;
-        font-weight: 500;
-        color: var(--text-primary);
-        border-bottom: 1px solid var(--border);
-      }
-
-      .mobile-menu a:last-child {
-        border-bottom: none;
-      }
-
-      /* Responsive */
+      /* ==================== */
+      /* RESPONSIVE */
+      /* ==================== */
       @media (max-width: 1024px) {
-        .hero-inner {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-
-        .hero h1 {
-          font-size: 42px;
-        }
-
-        .hero-visual {
-          max-width: 500px;
-          margin: 0 auto;
-        }
-
-        .footer-inner {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 40px;
-        }
-
-        .amc-services-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .amc-features {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .portfolio-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .why-choose-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .strengths-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
+        .hero-inner, .about-grid { grid-template-columns: 1fr; gap: 40px; }
+        .hero h1 { font-size: 40px; }
+        .services-grid { grid-template-columns: repeat(2, 1fr); }
+        .amc-grid { grid-template-columns: repeat(2, 1fr); }
+        .amc-features { grid-template-columns: repeat(2, 1fr); }
+        .why-grid { grid-template-columns: repeat(2, 1fr); }
+        .strengths-row { grid-template-columns: repeat(3, 1fr); }
+        .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 40px; }
       }
 
       @media (max-width: 768px) {
-        .nav-links, .nav-cta .btn, .nav-phone, .header-social {
-          display: none;
-        }
-
-        .mobile-menu-btn {
-          display: block;
-        }
-
-        .hero {
-          padding: 120px 0 60px;
-        }
-
-        .hero h1 {
-          font-size: 32px;
-        }
-
-        .hero-stats {
-          flex-wrap: wrap;
-          gap: 24px;
-        }
-
-        .hero-buttons {
-          flex-direction: column;
-        }
-
-        .hero-illustration {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .cta h2 {
-          font-size: 32px;
-        }
-
-        .cta-buttons {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .footer-inner {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-
-        .footer-brand, .footer-social {
-          justify-content: center;
-        }
-
-        .footer-bottom {
-          flex-direction: column;
-          gap: 16px;
-          text-align: center;
-        }
-
-        .amc-header h2 {
-          font-size: 32px;
-        }
-
-        .amc-services-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .portfolio-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .portfolio-header h2 {
-          font-size: 28px;
-        }
-
-        .why-choose-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .why-choose-header h2 {
-          font-size: 28px;
-        }
-
-        .strengths-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .amc-features {
-          grid-template-columns: 1fr;
-        }
-
-        .amc-service-card {
-          padding: 24px;
-        }
-
-        .amc-cta {
-          padding: 30px 20px;
-        }
-
-        .amc-cta-buttons {
-          flex-direction: column;
-        }
+        .nav-links, .nav-cta .btn, .nav-phone { display: none; }
+        .mobile-menu-btn { display: block; }
+        .hero { padding: 120px 0 60px; }
+        .hero h1 { font-size: 32px; }
+        .hero-stats { flex-wrap: wrap; gap: 24px; }
+        .hero-buttons { flex-direction: column; }
+        .hero-cards { grid-template-columns: repeat(2, 1fr); }
+        .about-visual { grid-template-columns: repeat(2, 1fr); }
+        .about-highlights { grid-template-columns: 1fr; }
+        .services-grid { grid-template-columns: 1fr; }
+        .amc-grid { grid-template-columns: 1fr; }
+        .amc-features { grid-template-columns: repeat(2, 1fr); }
+        .why-grid { grid-template-columns: 1fr; }
+        .strengths-row { grid-template-columns: repeat(2, 1fr); }
+        .cta-section h2 { font-size: 28px; }
+        .cta-buttons { flex-direction: column; align-items: center; }
+        .footer-inner { grid-template-columns: 1fr; text-align: center; }
+        .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
       }
     </style>
   </head>
   <body>
-    <!-- Header -->
+    <!-- ==================== -->
+    <!-- HEADER -->
+    <!-- ==================== -->
     <header class="header" id="header">
       <div class="container">
         <div class="header-inner">
@@ -1275,7 +519,7 @@
                 <i class="ri-phone-fill"></i>
                 +91-97172-70865
               </a>
-              <a href="contact.html" class="btn btn-primary">Get Started</a>
+              <a href="contact.html" class="btn btn-primary">Get Quote</a>
             </div>
           </nav>
 
@@ -1285,29 +529,30 @@
         </div>
       </div>
 
-      <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="about.html">About</a>
         <a href="why-us.html">Why Us</a>
         <a href="contact.html">Contact</a>
-        <a href="tel:+919717270865">Call: +91-97172-70865</a>
+        <a href="tel:+919717270865">📞 +91-97172-70865</a>
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ==================== -->
+    <!-- SECTION 1: HERO -->
+    <!-- ==================== -->
     <section class="hero">
       <div class="container">
         <div class="hero-inner">
           <div class="hero-content">
             <div class="hero-badge">
               <i class="ri-award-fill"></i>
-              24+ Years of Excellence · Trusted IT Partner
+              24+ Years of Excellence in IT Services
             </div>
             <h1>Trusted <span>IT Support & AMC</span> Services Provider</h1>
             <p class="hero-description">
-              Omnet IT System delivers reliable technology solutions to businesses of all sizes. With over 24 years of industry experience, we specialize in IT Infrastructure Support, Computer AMC, Laptop & Printer Sales, Rental, and Services across Delhi NCR.
+              Omnet IT System is a professional IT Support & Computer AMC Services provider, delivering reliable technology solutions to businesses of all sizes across Delhi NCR including Noida, Greater Noida, Gurugram, Faridabad & Delhi.
             </p>
             <div class="hero-buttons">
               <a href="contact.html" class="btn btn-primary">
@@ -1316,7 +561,7 @@
               </a>
               <a href="services.html" class="btn btn-secondary">
                 <i class="ri-arrow-right-line"></i>
-                Our Services
+                View Services
               </a>
             </div>
             <div class="hero-stats">
@@ -1326,50 +571,40 @@
               </div>
               <div class="stat-item">
                 <div class="stat-number">500+</div>
-                <div class="stat-label">Clients Served</div>
+                <div class="stat-label">Happy Clients</div>
               </div>
               <div class="stat-item">
                 <div class="stat-number">24/7</div>
-                <div class="stat-label">Support Available</div>
+                <div class="stat-label">Support</div>
               </div>
             </div>
           </div>
 
           <div class="hero-visual">
-            <div class="hero-image-container">
-              <div class="hero-illustration">
-                <div class="hero-card">
-                  <i class="ri-cloud-line"></i>
-                  <h4>Cloud Solutions</h4>
-                </div>
-                <div class="hero-card">
-                  <i class="ri-shield-keyhole-line"></i>
-                  <h4>Cybersecurity</h4>
-                </div>
-                <div class="hero-card">
-                  <i class="ri-server-line"></i>
-                  <h4>Infrastructure</h4>
-                </div>
-                <div class="hero-card">
-                  <i class="ri-customer-service-2-line"></i>
-                  <h4>IT Support</h4>
-                </div>
-                <div class="hero-card">
-                  <i class="ri-database-2-line"></i>
-                  <h4>Data Backup</h4>
-                </div>
-                <div class="hero-card">
-                  <i class="ri-global-line"></i>
-                  <h4>Networking</h4>
-                </div>
+            <div class="hero-cards">
+              <div class="hero-card">
+                <i class="ri-computer-line"></i>
+                <h4>Desktop & Laptop AMC</h4>
               </div>
-              <div class="floating-badge badge-1">
-                <i class="ri-check-double-line"></i>
-                <span>100% Secure</span>
+              <div class="hero-card">
+                <i class="ri-router-line"></i>
+                <h4>Network Support</h4>
               </div>
-              <div class="floating-badge badge-2">
-                <i class="ri-time-line"></i>
-                <span>Quick Response</span>
+              <div class="hero-card">
+                <i class="ri-printer-line"></i>
+                <h4>Printer Services</h4>
+              </div>
+              <div class="hero-card">
+                <i class="ri-shield-check-line"></i>
+                <h4>IT Security</h4>
+              </div>
+              <div class="hero-card">
+                <i class="ri-server-line"></i>
+                <h4>Server Support</h4>
+              </div>
+              <div class="hero-card">
+                <i class="ri-customer-service-2-line"></i>
+                <h4>24/7 Helpdesk</h4>
               </div>
             </div>
           </div>
@@ -1377,237 +612,205 @@
       </div>
     </section>
 
-    <!-- IT Services Portfolio Section -->
-    <section class="portfolio-section">
+    <!-- ==================== -->
+    <!-- SECTION 2: ABOUT -->
+    <!-- ==================== -->
+    <section class="about-section">
       <div class="container">
-        <div class="portfolio-header">
-          <h2>Our IT <span>Services Portfolio</span></h2>
-          <p>Comprehensive technology solutions for businesses of all sizes - from startups to enterprises</p>
+        <div class="about-grid">
+          <div class="about-content">
+            <h2>About <span>Omnet IT System</span></h2>
+            <p>Omnet IT System is among the best Office IT AMC Service Providers, offering customized and cost-effective Annual Maintenance Contracts (AMC) for offices, corporate environments, and commercial premises.</p>
+            <p>Our experienced and certified IT engineers are carefully recruited and trained to manage site-specific IT requirements, ensuring high service quality, fast response time, and maximum system uptime.</p>
+            <p>A professionally managed IT AMC Service helps maintain a secure, optimized, and high-performing IT environment.</p>
+            
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <i class="ri-check-double-line"></i>
+                <span>Improved Productivity</span>
+              </div>
+              <div class="highlight-box">
+                <i class="ri-check-double-line"></i>
+                <span>Reduced Downtime</span>
+              </div>
+              <div class="highlight-box">
+                <i class="ri-check-double-line"></i>
+                <span>Better Reliability</span>
+              </div>
+              <div class="highlight-box">
+                <i class="ri-check-double-line"></i>
+                <span>Peace of Mind</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual">
+            <div class="about-stat-card">
+              <h3>24+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="about-stat-card light">
+              <h3>500+</h3>
+              <p>Clients Served</p>
+            </div>
+            <div class="about-stat-card light">
+              <h3>50+</h3>
+              <p>IT Engineers</p>
+            </div>
+            <div class="about-stat-card">
+              <h3>99%</h3>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SECTION 3: SERVICES PORTFOLIO -->
+    <!-- ==================== -->
+    <section class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="ri-service-line"></i>
+            Our Services
+          </div>
+          <h2>IT <span>Services Portfolio</span></h2>
+          <p>Comprehensive technology solutions for businesses of all sizes</p>
         </div>
 
-        <div class="portfolio-grid">
-          <!-- IT Support & AMC -->
-          <div class="portfolio-card">
-            <div class="portfolio-icon">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
               <i class="ri-tools-fill"></i>
             </div>
             <h3>💻 IT Support & AMC</h3>
-            <ul>
-              <li><i class="ri-check-line"></i> Desktop & Laptop AMC</li>
-              <li><i class="ri-check-line"></i> Network & Server Support</li>
-              <li><i class="ri-check-line"></i> IT Infrastructure Maintenance</li>
-              <li><i class="ri-check-line"></i> Preventive & Breakdown Support</li>
-            </ul>
+            <p>Desktop & Laptop AMC, Network Support, IT Infrastructure Maintenance</p>
           </div>
 
-          <!-- Computer, Laptop & Printer -->
-          <div class="portfolio-card">
-            <div class="portfolio-icon">
+          <div class="service-card">
+            <div class="service-icon">
               <i class="ri-computer-fill"></i>
             </div>
             <h3>🖥 Sales & Services</h3>
-            <ul>
-              <li><i class="ri-check-line"></i> Computer & Laptop Sales</li>
-              <li><i class="ri-check-line"></i> Printer Sales & Support</li>
-              <li><i class="ri-check-line"></i> Hardware Repair & Replacement</li>
-              <li><i class="ri-check-line"></i> Spare Parts & Accessories</li>
-            </ul>
+            <p>Computer, Laptop & Printer Sales, Hardware Repair & Replacement</p>
           </div>
 
-          <!-- IT Equipment Rental -->
-          <div class="portfolio-card">
-            <div class="portfolio-icon">
+          <div class="service-card">
+            <div class="service-icon">
               <i class="ri-swap-box-fill"></i>
             </div>
             <h3>🔁 IT Equipment Rental</h3>
-            <ul>
-              <li><i class="ri-check-line"></i> Computer & Laptop Rental</li>
-              <li><i class="ri-check-line"></i> Printer Rental for Projects</li>
-              <li><i class="ri-check-line"></i> Short-term Rental Plans</li>
-              <li><i class="ri-check-line"></i> Long-term Rental Plans</li>
-            </ul>
+            <p>Computer & Laptop Rental, Printer Rental, Short & Long-term Plans</p>
           </div>
 
-          <!-- Network & Security -->
-          <div class="portfolio-card">
-            <div class="portfolio-icon">
+          <div class="service-card">
+            <div class="service-icon">
               <i class="ri-shield-keyhole-fill"></i>
             </div>
             <h3>🌐 Network & Security</h3>
-            <ul>
-              <li><i class="ri-check-line"></i> LAN / WAN Setup & Maintenance</li>
-              <li><i class="ri-check-line"></i> Firewall & Network Security</li>
-              <li><i class="ri-check-line"></i> Data Backup & Recovery</li>
-              <li><i class="ri-check-line"></i> Antivirus Management</li>
-            </ul>
+            <p>LAN/WAN Setup, Firewall Security, Data Backup & Recovery</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-section">
-      <div class="container">
-        <div class="why-choose-header">
-          <h2>Why Choose <span>Omnet IT System</span>?</h2>
-        </div>
-
-        <div class="why-choose-grid">
-          <div class="why-choose-card">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>One-Stop IT Solution Provider</span>
-          </div>
-          <div class="why-choose-card">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Customized AMC Plans</span>
-          </div>
-          <div class="why-choose-card">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Preventive & Breakdown Maintenance</span>
-          </div>
-          <div class="why-choose-card">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Experienced & Certified IT Engineers</span>
-          </div>
-          <div class="why-choose-card">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Fast Remote & Onsite Support</span>
-          </div>
-          <div class="why-choose-card">
-            <i class="ri-checkbox-circle-fill"></i>
-            <span>Pan-Delhi NCR Service Coverage</span>
-          </div>
-        </div>
-
-        <div class="strengths-grid">
-          <div class="strength-item">
-            <div class="strength-number">1</div>
-            <p>Gold Standard Customer Service</p>
-          </div>
-          <div class="strength-item">
-            <div class="strength-number">2</div>
-            <p>Focus on Cost Efficiency & Quality</p>
-          </div>
-          <div class="strength-item">
-            <div class="strength-number">3</div>
-            <p>Fully GST-Compliant Organization</p>
-          </div>
-          <div class="strength-item">
-            <div class="strength-number">4</div>
-            <p>Structured Helpdesk & Escalation</p>
-          </div>
-          <div class="strength-item">
-            <div class="strength-number">5</div>
-            <p>Client Feedback After Every Call</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AMC Services Section -->
+    <!-- ==================== -->
+    <!-- SECTION 4: AMC SERVICES -->
+    <!-- ==================== -->
     <section class="amc-section">
       <div class="container">
         <div class="amc-header">
-          <div class="amc-badge">
+          <div class="section-badge">
             <i class="ri-award-fill"></i>
-            Trusted IT Partner in Delhi NCR
+            Best in Delhi NCR
           </div>
-          <h2>Best Computer <span>AMC Services</span> in Delhi NCR</h2>
-          <p class="subtitle">Reliable Desktop, Laptop & Network AMC Services Serving Noida, Greater Noida, Gurugram, Faridabad & Delhi</p>
-          <p class="description">Keep your business running smoothly with fast, affordable, and professional Computer Annual Maintenance Services. Trusted by businesses for quick response, expert engineers, and complete IT support.</p>
+          <h2>Computer <span>AMC Services</span></h2>
+          <p class="subtitle">Reliable Desktop, Laptop & Network AMC Services</p>
+          <p>Serving Noida, Greater Noida, Gurugram, Faridabad & Delhi with fast, affordable, and professional Annual Maintenance Services.</p>
         </div>
 
-        <div class="amc-services-grid">
-          <div class="amc-service-card">
-            <div class="amc-service-icon">
+        <div class="amc-grid">
+          <div class="amc-card">
+            <div class="amc-card-icon">
               <i class="ri-computer-line"></i>
             </div>
-            <div class="amc-service-content">
+            <div>
               <h3>Desktop & Laptop AMC</h3>
-              <p>Complete maintenance coverage for all your desktop computers and laptops with regular servicing and quick repairs.</p>
+              <p>Complete maintenance coverage for all your computers with regular servicing and quick repairs.</p>
             </div>
           </div>
 
-          <div class="amc-service-card">
-            <div class="amc-service-icon">
+          <div class="amc-card">
+            <div class="amc-card-icon">
               <i class="ri-router-line"></i>
             </div>
-            <div class="amc-service-content">
+            <div>
               <h3>Network AMC</h3>
-              <p>Router, switch, firewall maintenance and network infrastructure support for seamless connectivity.</p>
+              <p>Router, switch, firewall maintenance and network infrastructure support.</p>
             </div>
           </div>
 
-          <div class="amc-service-card">
-            <div class="amc-service-icon">
+          <div class="amc-card">
+            <div class="amc-card-icon">
               <i class="ri-server-line"></i>
             </div>
-            <div class="amc-service-content">
+            <div>
               <h3>Server Maintenance</h3>
-              <p>Comprehensive server AMC including hardware monitoring, updates, and preventive maintenance.</p>
+              <p>Comprehensive server AMC including hardware monitoring and updates.</p>
             </div>
           </div>
 
-          <div class="amc-service-card">
-            <div class="amc-service-icon">
+          <div class="amc-card">
+            <div class="amc-card-icon">
               <i class="ri-printer-line"></i>
             </div>
-            <div class="amc-service-content">
+            <div>
               <h3>Printer & Peripheral AMC</h3>
-              <p>Maintenance for printers, scanners, UPS and all IT peripherals to keep your office running.</p>
+              <p>Maintenance for printers, scanners, UPS and all IT peripherals.</p>
             </div>
           </div>
 
-          <div class="amc-service-card">
-            <div class="amc-service-icon">
+          <div class="amc-card">
+            <div class="amc-card-icon">
               <i class="ri-shield-check-line"></i>
             </div>
-            <div class="amc-service-content">
+            <div>
               <h3>Security Solutions</h3>
-              <p>Antivirus management, firewall configuration, and complete cybersecurity maintenance.</p>
+              <p>Antivirus management, firewall configuration, and cybersecurity.</p>
             </div>
           </div>
 
-          <div class="amc-service-card">
-            <div class="amc-service-icon">
+          <div class="amc-card">
+            <div class="amc-card-icon">
               <i class="ri-customer-service-2-line"></i>
             </div>
-            <div class="amc-service-content">
+            <div>
               <h3>24/7 Helpline</h3>
-              <p>Round-the-clock technical support and helpdesk services. We are always at your service.</p>
+              <p>Round-the-clock technical support and helpdesk services.</p>
             </div>
           </div>
         </div>
 
         <div class="amc-features">
           <div class="amc-feature">
-            <div class="amc-feature-icon">
-              <i class="ri-flashlight-line"></i>
-            </div>
+            <i class="ri-flashlight-line"></i>
             <h4>Instant Remote Support</h4>
             <p>Max wait: 20 minutes</p>
           </div>
-
           <div class="amc-feature">
-            <div class="amc-feature-icon">
-              <i class="ri-car-line"></i>
-            </div>
+            <i class="ri-car-line"></i>
             <h4>Onsite Support</h4>
             <p>Within 4 Hours</p>
           </div>
-
           <div class="amc-feature">
-            <div class="amc-feature-icon">
-              <i class="ri-tools-line"></i>
-            </div>
+            <i class="ri-tools-line"></i>
             <h4>Preventive Maintenance</h4>
             <p>Regular Scheduled Visits</p>
           </div>
-
           <div class="amc-feature">
-            <div class="amc-feature-icon">
-              <i class="ri-user-star-line"></i>
-            </div>
+            <i class="ri-user-star-line"></i>
             <h4>Certified Engineers</h4>
             <p>Experienced & Professional</p>
           </div>
@@ -1618,82 +821,126 @@
           <div class="amc-cta-buttons">
             <a href="tel:+919717270865" class="btn btn-white">
               <i class="ri-phone-fill"></i>
-              Call Now: +91-97172-70865
+              Call: +91-97172-70865
             </a>
-            <a href="contact.html" class="btn-outline">
+            <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white;">
               <i class="ri-file-list-3-line"></i>
-              Request Free Quote
+              Request Quote
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- ==================== -->
+    <!-- SECTION 5: WHY CHOOSE US -->
+    <!-- ==================== -->
+    <section class="why-section">
       <div class="container">
-        <div class="cta-inner">
-          <h2>Ready to Transform Your IT Infrastructure?</h2>
-          <p>
-            Join 500+ businesses that trust OMNET IT SYSTEM for their technology needs. Get a free consultation today.
-          </p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-white">
-              <i class="ri-mail-line"></i>
-              Contact Us
-            </a>
-            <a href="tel:+919717270865" class="btn btn-secondary" style="border-color: white; color: white;">
-              <i class="ri-phone-line"></i>
-              Call Now
-            </a>
+        <div class="section-header">
+          <h2>Why Choose <span>Omnet IT System</span>?</h2>
+          <p>Our key differentiators that make us the preferred IT partner</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>One-Stop IT Solution Provider</span>
+          </div>
+          <div class="why-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Customized AMC Plans</span>
+          </div>
+          <div class="why-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Preventive & Breakdown Maintenance</span>
+          </div>
+          <div class="why-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Experienced & Certified Engineers</span>
+          </div>
+          <div class="why-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Fast Remote & Onsite Support</span>
+          </div>
+          <div class="why-card">
+            <i class="ri-checkbox-circle-fill"></i>
+            <span>Pan-Delhi NCR Coverage</span>
+          </div>
+        </div>
+
+        <div class="strengths-row">
+          <div class="strength-box">
+            <div class="strength-num">1</div>
+            <p>Gold Standard Customer Service</p>
+          </div>
+          <div class="strength-box">
+            <div class="strength-num">2</div>
+            <p>Cost Efficiency & Quality Focus</p>
+          </div>
+          <div class="strength-box">
+            <div class="strength-num">3</div>
+            <p>Fully GST-Compliant</p>
+          </div>
+          <div class="strength-box">
+            <div class="strength-num">4</div>
+            <p>Structured Helpdesk</p>
+          </div>
+          <div class="strength-box">
+            <div class="strength-num">5</div>
+            <p>Client Feedback System</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Social Connect Section -->
-    <section class="social-connect">
+    <!-- ==================== -->
+    <!-- SECTION 6: CTA -->
+    <!-- ==================== -->
+    <section class="cta-section">
       <div class="container">
-        <h2>Connect With Us on Social Media</h2>
-        <p>Stay updated with the latest IT trends, tips, and company news</p>
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today for a customized AMC proposal tailored to your business needs.</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-white">
+            <i class="ri-mail-line"></i>
+            Contact Us
+          </a>
+          <a href="tel:+919717270865" class="btn btn-secondary" style="border-color: white; color: white;">
+            <i class="ri-phone-line"></i>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== -->
+    <!-- SECTION 7: SOCIAL -->
+    <!-- ==================== -->
+    <section class="social-section">
+      <div class="container">
+        <h2>Connect With Us</h2>
+        <p>Stay updated with the latest IT trends and company news</p>
         <div class="social-links">
-          <!-- Company LinkedIn -->
-          <a href="https://www.linkedin.com/company/omnet-it-system/"
-             class="social-link linkedin"
-             title="OMNET IT System on LinkedIn"
-             target="_blank"
-             rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/company/omnet-it-system/" class="social-link linkedin" target="_blank" title="LinkedIn">
             <i class="ri-linkedin-fill"></i>
           </a>
-          <!-- Personal LinkedIn -->
-          <a href="https://www.linkedin.com/in/prashant-pandey-2997bb46/"
-             class="social-link linkedin personal"
-             title="Prashant Pandey on LinkedIn"
-             target="_blank"
-             rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/prashant-pandey-2997bb46/" class="social-link linkedin" target="_blank" title="Founder LinkedIn">
             <i class="ri-linkedin-fill"></i>
           </a>
-          <!-- Twitter (X) -->
-          <a href="https://x.com/omnetit"
-             class="social-link twitter"
-             title="OMNET IT System on X (Twitter)"
-             target="_blank"
-             rel="noopener noreferrer">
+          <a href="https://x.com/omnetit" class="social-link twitter" target="_blank" title="Twitter">
             <i class="ri-twitter-x-fill"></i>
           </a>
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/OMNETITSYSTEMS"
-             class="social-link facebook"
-             title="OMNET IT Systems on Facebook"
-             target="_blank"
-             rel="noopener noreferrer">
+          <a href="https://www.facebook.com/OMNETITSYSTEMS" class="social-link facebook" target="_blank" title="Facebook">
             <i class="ri-facebook-fill"></i>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ==================== -->
+    <!-- FOOTER -->
+    <!-- ==================== -->
     <footer class="footer">
       <div class="container">
         <div class="footer-inner">
@@ -1704,17 +951,16 @@
               </div>
               OMNET <span>IT</span>
             </a>
-            <p>Your trusted partner for enterprise IT solutions. We deliver secure, scalable, and innovative technology services across NCR.</p>
+            <p>Your trusted partner for IT Support & AMC Services. 24+ years of delivering reliable technology solutions across Delhi NCR.</p>
           </div>
 
           <div class="footer-links">
             <h4>Services</h4>
             <ul>
-              <li><a href="services.html">Cloud Solutions</a></li>
-              <li><a href="services.html">Cybersecurity</a></li>
-              <li><a href="services.html">IT Support</a></li>
-              <li><a href="services.html">Networking</a></li>
-              <li><a href="services.html">Data Backup</a></li>
+              <li><a href="services.html">Computer AMC</a></li>
+              <li><a href="services.html">Network Support</a></li>
+              <li><a href="services.html">IT Infrastructure</a></li>
+              <li><a href="services.html">Hardware Sales</a></li>
             </ul>
           </div>
 
@@ -1724,8 +970,6 @@
               <li><a href="about.html">About Us</a></li>
               <li><a href="why-us.html">Why Choose Us</a></li>
               <li><a href="contact.html">Contact</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
             </ul>
           </div>
 
@@ -1734,13 +978,13 @@
             <ul>
               <li><a href="tel:+919717270865">+91-97172-70865</a></li>
               <li><a href="mailto:info@omnetitsystem.com">info@omnetitsystem.com</a></li>
-              <li><a href="#">Ghaziabad, UP, India</a></li>
+              <li><a href="#">Ghaziabad, UP</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 OMNET IT SYSTEM. All rights reserved.</p>
+          <p>© 2024 OMNET IT SYSTEM. All rights reserved.</p>
           <div class="footer-bottom-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
