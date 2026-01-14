@@ -870,6 +870,78 @@
         }
       }
 
+      /* Leadership Team */
+      .team-section {
+        padding: 80px 0;
+        background: white;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 24px;
+      }
+
+      .team-member {
+        background: var(--bg-light);
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 1px solid var(--border);
+      }
+
+      .team-member:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary);
+      }
+
+      .team-member-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: var(--gradient-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 36px;
+        color: white;
+        font-weight: 700;
+      }
+
+      .team-member h4 {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 6px;
+      }
+
+      .team-member p {
+        font-size: 13px;
+        color: var(--primary);
+        font-weight: 500;
+      }
+
+      @media (max-width: 1100px) {
+        .team-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 700px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       /* Timeline */
       .timeline-section {
         padding: 100px 0;
@@ -1496,6 +1568,44 @@
                 <i class="ri-mail-fill"></i>
               </a>
             </div>
+          </div>
+        </div>
+
+        <!-- Leadership Team -->
+        <div class="section-header" style="margin-top: 80px;">
+          <div class="section-badge">
+            <i class="ri-team-line"></i>
+            Our Team
+          </div>
+          <h2>Leadership Team</h2>
+          <p>Meet the dedicated professionals driving OMNET IT SYSTEM forward.</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-member-avatar">DP</div>
+            <h4>Dauly Pandey</h4>
+            <p>Director</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">MM</div>
+            <h4>Manoj Mishra</h4>
+            <p>Technical Lead</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">SS</div>
+            <h4>Sanjay Singh</h4>
+            <p>Senior Engineer</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">MA</div>
+            <h4>MD Arif</h4>
+            <p>IT Specialist</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">SS</div>
+            <h4>Sonu Singh</h4>
+            <p>Support Engineer</p>
           </div>
         </div>
       </div>
