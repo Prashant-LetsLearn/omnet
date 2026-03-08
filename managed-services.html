@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Managed Services — Balaji Computer Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { teal: { 50:'#f0fdfa',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0d9488',700:'#0f766e',800:'#115e59',900:'#134e4a' } },
+          fontFamily: { sans: ['DM Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'DM Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .fade-in { animation: fadeIn 0.7s ease forwards; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .nav-scrolled { background: white !important; box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08); }
+    .nav-link-scrolled { color: #374151 !important; }
+    .pulse-dot { animation: pulseDot 1.5s infinite; }
+    @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.3)} }
+    .partner-card:hover .partner-icon { background-color: #14b8a6; }
+    .partner-card:hover .partner-icon i { color: white !important; }
+    .whybcs-card:hover { background-color: #14b8a6; }
+    .whybcs-card:hover h3, .whybcs-card:hover p { color: white !important; }
+    .whybcs-card:hover .wbcs-icon { background-color: rgba(255,255,255,0.2); }
+    .whybcs-card:hover .wbcs-icon i { color: white !important; }
+    .trustedstat-card:hover .ts-icon { background-color: #14b8a6; }
+    .trustedstat-card:hover .ts-icon i { color: white !important; }
+    .page-hero { background: linear-gradient(135deg, #0f766e 0%, #134e4a 100%); }
+    .slide-text { transition: opacity 0.5s ease, transform 0.5s ease; }
+    .slide-text.animating { opacity: 0; transform: translateY(16px); }
+    .hero-bg { transition: opacity 0.7s ease; }
+    .hero-bg.animating { opacity: 0; }
+    .dot-active { width: 2.5rem !important; background-color: #2dd4bf !important; }
+    .dot-inactive { width: 0.5rem; background-color: rgba(255,255,255,0.4); }
+    .nav-transparent .nav-link { color: white; }
+    .nav-transparent .hamburger-icon { color: white; }
+    
+  </style>
+</head>
+<body class="min-h-screen bg-white">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent nav-transparent" id="navbar">
+  <div class="container mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center cursor-pointer">
+        <img src="https://static.readdy.ai/image/9611c0a277c9dbd48d4a6cc1c17881dc/4f504cf0dc5d4e50767361f048ea8cb1.jpeg" alt="Balaji CS Logo" class="h-12 w-auto" />
+      </a>
+      <div class="hidden lg:flex items-center space-x-6 text-sm">
+        <a href="index.html" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">Home</a>
+<a href="about.html" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">About</a>
+<a href="products.html" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">Products</a>
+<a href="services.html" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">Services</a>
+<a href="managed-services.html" class="text-teal-400 font-bold">Managed Services</a>
+<a href="about.html#why-choose-us" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">Why Us</a>
+<a href="portfolio.html" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">Portfolio</a>
+<a href="pricing.html" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">Pricing</a>
+<a href="contact.html" class="nav-link font-medium text-white hover:text-teal-400 transition-colors duration-300">Contact</a>
+
+      </div>
+      <div class="hidden lg:block">
+        <a href="contact.html" class="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold hover:bg-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl">Get Started</a>
+      </div>
+      <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 cursor-pointer" aria-label="Toggle menu">
+        <i id="hamburger-icon" class="ri-menu-line text-2xl text-white hamburger-icon"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg rounded-lg mb-4 py-4">
+      <div class="flex flex-col space-y-4 px-6">
+        <a href="index.html" class="font-medium text-gray-700 hover:text-teal-500">Home</a>
+<a href="about.html" class="font-medium text-gray-700 hover:text-teal-500">About</a>
+<a href="products.html" class="font-medium text-gray-700 hover:text-teal-500">Products</a>
+<a href="services.html" class="font-medium text-gray-700 hover:text-teal-500">Services</a>
+<a href="managed-services.html" class="font-medium text-teal-600 font-bold">Managed Services</a>
+<a href="about.html#why-choose-us" class="font-medium text-gray-700 hover:text-teal-500">Why Us</a>
+<a href="portfolio.html" class="font-medium text-gray-700 hover:text-teal-500">Portfolio</a>
+<a href="pricing.html" class="font-medium text-gray-700 hover:text-teal-500">Pricing</a>
+<a href="contact.html" class="font-medium text-gray-700 hover:text-teal-500">Contact</a>
+
+        <a href="contact.html" class="px-6 py-3 bg-teal-500 text-white rounded-lg font-semibold hover:bg-teal-600 transition-all text-center">Get Started</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="page-hero pt-32 pb-16 text-center">
+  <div class="container mx-auto px-6">
+    <p class="text-teal-300 font-semibold text-sm uppercase tracking-widest mb-3">Enterprise IT Management</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Managed <span class="text-teal-300">IT Services</span></h1>
+    <p class="text-teal-100 text-lg max-w-2xl mx-auto">End-to-end IT management to optimize performance, enhance security, and ensure business continuity</p>
+    <nav class="flex justify-center mt-6 text-sm"><a href="index.html" class="text-teal-300 hover:text-white">Home</a><span class="mx-2 text-teal-400">/</span><span class="text-white">Managed Services</span></nav>
+  </div>
+</div>
+
+<section id="managed-services" class="py-24 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold text-gray-900 mb-10 text-center">Scope of Managed Services</h3>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal-500"><div class="flex items-start mb-6"><div class="w-14 h-14 flex items-center justify-center bg-teal-500 rounded-lg mr-4 flex-shrink-0"><i class="ri-server-line text-2xl text-white"></i></div><h4 class="text-xl font-bold text-gray-900 leading-tight">Complete IT Infrastructure Management</h4></div><ul class="space-y-3"><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">End-user computing management (Desktops, Laptops, Workstations)</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Server & Storage administration</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Network infrastructure monitoring and optimization</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Firewall & security device management</span></li></ul></div>
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal-500"><div class="flex items-start mb-6"><div class="w-14 h-14 flex items-center justify-center bg-teal-500 rounded-lg mr-4 flex-shrink-0"><i class="ri-cloud-line text-2xl text-white"></i></div><h4 class="text-xl font-bold text-gray-900 leading-tight">IT Migration & Transformation Services</h4></div><ul class="space-y-3"><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Email & Collaboration Platform Migration</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">On-Premise to Cloud Migration</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Tenant-to-Tenant Migration</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Structured Data Migration with integrity validation</span></li></ul><div class="mt-4 p-4 bg-teal-50 rounded-lg border-l-4 border-teal-500"><p class="text-sm text-gray-700"><strong>Note:</strong> All migrations are executed with risk assessment, rollback planning, and minimal business disruption.</p></div></div>
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal-500"><div class="flex items-start mb-6"><div class="w-14 h-14 flex items-center justify-center bg-teal-500 rounded-lg mr-4 flex-shrink-0"><i class="ri-customer-service-2-line text-2xl text-white"></i></div><h4 class="text-xl font-bold text-gray-900 leading-tight">Dedicated Engineering Support</h4></div><ul class="space-y-3"><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Resident Engineers (Onsite FMS)</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Remote Helpdesk Support</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">L1 / L2 / L3 Technical Support</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">SLA-based Response & Resolution</span></li></ul></div>
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-teal-500"><div class="flex items-start mb-6"><div class="w-14 h-14 flex items-center justify-center bg-teal-500 rounded-lg mr-4 flex-shrink-0"><i class="ri-tools-line text-2xl text-white"></i></div><h4 class="text-xl font-bold text-gray-900 leading-tight">Hardware Maintenance & Lifecycle Management</h4></div><ul class="space-y-3"><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Preventive & Corrective Maintenance</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Server & Network Hardware Support</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Asset Tracking & Inventory Control</span></li><li class="flex items-start"><i class="ri-checkbox-circle-fill text-teal-500 text-lg mr-3 mt-0.5 flex-shrink-0"></i><span class="text-gray-700">Annual Maintenance Contracts (AMC)</span></li></ul></div>
+      </div>
+    </div>
+
+    <!-- Our Approach -->
+    <div class="bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl shadow-2xl p-12 mb-12">
+      <h3 class="text-3xl font-bold text-white mb-8 text-center">Our Approach</h3>
+      <p class="text-xl text-teal-50 text-center mb-12 max-w-3xl mx-auto">We follow a structured lifecycle approach to ensure high availability, improved security posture, and scalable IT infrastructure.</p>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div class="text-center"><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4 hover:bg-white/20 transition-all"><div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-full mx-auto mb-4"><i class="ri-search-eye-line text-3xl text-white"></i></div><h4 class="text-2xl font-bold text-white mb-2">Assess</h4><p class="text-sm text-teal-50">Infrastructure evaluation</p></div></div>
+        <div class="text-center"><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4 hover:bg-white/20 transition-all"><div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-full mx-auto mb-4"><i class="ri-draft-line text-3xl text-white"></i></div><h4 class="text-2xl font-bold text-white mb-2">Design</h4><p class="text-sm text-teal-50">Solution architecture</p></div></div>
+        <div class="text-center"><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4 hover:bg-white/20 transition-all"><div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-full mx-auto mb-4"><i class="ri-settings-3-line text-3xl text-white"></i></div><h4 class="text-2xl font-bold text-white mb-2">Implement</h4><p class="text-sm text-teal-50">Deployment execution</p></div></div>
+        <div class="text-center"><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4 hover:bg-white/20 transition-all"><div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-full mx-auto mb-4"><i class="ri-shield-check-line text-3xl text-white"></i></div><h4 class="text-2xl font-bold text-white mb-2">Manage</h4><p class="text-sm text-teal-50">Ongoing operations</p></div></div>
+        <div class="text-center"><div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-4 hover:bg-white/20 transition-all"><div class="w-16 h-16 flex items-center justify-center bg-white/20 rounded-full mx-auto mb-4"><i class="ri-speed-up-line text-3xl text-white"></i></div><h4 class="text-2xl font-bold text-white mb-2">Optimize</h4><p class="text-sm text-teal-50">Continuous improvement</p></div></div>
+      </div>
+    </div>
+    <div class="text-center"><a href="contact.html" class="inline-block px-10 py-4 bg-teal-500 text-white rounded-lg font-semibold hover:bg-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl text-lg">Request Managed Services Consultation</a></div>
+  </div>
+</section>
+
+<footer class="bg-gradient-to-br from-teal-600 to-teal-700 text-white">
+  <div class="container mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div>
+        <img src="https://static.readdy.ai/image/9611c0a277c9dbd48d4a6cc1c17881dc/4f504cf0dc5d4e50767361f048ea8cb1.jpeg" alt="Balaji CS Logo" class="h-12 w-auto mb-6" />
+        <p class="text-teal-100 mb-6 leading-relaxed">Your trusted partner in digital transformation. We deliver innovative IT solutions that drive business growth.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 bg-teal-500 hover:bg-white hover:text-teal-600 rounded-full flex items-center justify-center transition-colors duration-300"><i class="ri-facebook-fill text-lg"></i></a>
+          <a href="#" class="w-10 h-10 bg-teal-500 hover:bg-white hover:text-teal-600 rounded-full flex items-center justify-center transition-colors duration-300"><i class="ri-twitter-fill text-lg"></i></a>
+          <a href="#" class="w-10 h-10 bg-teal-500 hover:bg-white hover:text-teal-600 rounded-full flex items-center justify-center transition-colors duration-300"><i class="ri-linkedin-fill text-lg"></i></a>
+          <a href="#" class="w-10 h-10 bg-teal-500 hover:bg-white hover:text-teal-600 rounded-full flex items-center justify-center transition-colors duration-300"><i class="ri-instagram-fill text-lg"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-teal-400 transition-colors">Home</a></li>
+          <li><a href="about.html" class="hover:text-teal-400 transition-colors">About Us</a></li>
+          <li><a href="products.html" class="hover:text-teal-400 transition-colors">Products</a></li>
+          <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+          <li><a href="managed-services.html" class="hover:text-teal-400 transition-colors">Managed Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-teal-400 transition-colors">Portfolio</a></li>
+          <li><a href="pricing.html" class="hover:text-teal-400 transition-colors">Pricing</a></li>
+          <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-6">Our Services</h3>
+        <ul class="space-y-3">
+          <li><a href="services.html" class="text-teal-100 hover:text-white transition-colors">IT Infrastructure Setup</a></li>
+          <li><a href="services.html" class="text-teal-100 hover:text-white transition-colors">Network Design & Implementation</a></li>
+          <li><a href="managed-services.html" class="text-teal-100 hover:text-white transition-colors">Cloud Deployment & Management</a></li>
+          <li><a href="managed-services.html" class="text-teal-100 hover:text-white transition-colors">Annual Maintenance Contracts</a></li>
+          <li><a href="services.html" class="text-teal-100 hover:text-white transition-colors">Cybersecurity Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-6">Contact Info</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start"><i class="ri-map-pin-line text-teal-300 mt-1 mr-3"></i><span class="text-teal-100">405B, Skylark Building, 60 Nehru Place, New Delhi – 110019</span></li>
+          <li class="flex items-start"><i class="ri-phone-line text-teal-300 mt-1 mr-3"></i><div class="text-teal-100"><a href="tel:01146698819" class="hover:text-white block">011-46698819</a><a href="tel:+919971776428" class="hover:text-white block">+91 9971776428</a></div></li>
+          <li class="flex items-start"><i class="ri-mail-line text-teal-300 mt-1 mr-3"></i><a href="mailto:info@balajics.com" class="text-teal-100 hover:text-white">info@balajics.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-teal-500 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-teal-100 text-sm mb-4 md:mb-0">© 2025 Balaji Computer Solution. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-teal-100 hover:text-white text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-teal-100 hover:text-white text-sm transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    const links = document.querySelectorAll('.nav-link');
+    const hamburger = document.querySelector('.hamburger-icon');
+    if (window.scrollY > 50) {
+      navbar.classList.add('nav-scrolled');
+      navbar.classList.remove('nav-transparent');
+      links.forEach(l => { l.style.color = '#374151'; });
+      if (hamburger) hamburger.style.color = '#111827';
+    } else {
+      navbar.classList.remove('nav-scrolled');
+      navbar.classList.add('nav-transparent');
+      links.forEach(l => { l.style.color = 'white'; });
+      if (hamburger) hamburger.style.color = 'white';
+    }
+  });
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('hamburger-icon');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      icon.className = 'ri-close-line text-2xl text-gray-900';
+    } else {
+      menu.classList.add('hidden');
+      icon.className = 'ri-menu-line text-2xl hamburger-icon';
+    }
+  }
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919971776428?text=Hello" target="_blank" rel="noopener noreferrer" id="wa-btn"
+   style="position:fixed;bottom:28px;right:28px;z-index:9999;width:62px;height:62px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,0.55);transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none;"
+   onmouseover="this.style.transform='scale(1.13)';this.style.boxShadow='0 8px 32px rgba(37,211,102,0.7)'"
+   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 24px rgba(37,211,102,0.55)'"
+   title="Chat with us on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="34" height="34" fill="white">
+    <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.663 4.61 1.813 6.512L4 29l7.688-1.797A12.914 12.914 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.9 0-3.7-.492-5.265-1.352l-.377-.215-4.563 1.066 1.09-4.438-.234-.385A9.953 9.953 0 016 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.463-7.424c-.299-.15-1.77-.873-2.044-.972-.273-.099-.473-.149-.672.15-.199.298-.771.972-.945 1.172-.174.199-.348.224-.646.075-.299-.15-1.261-.465-2.401-1.483-.888-.792-1.487-1.77-1.661-2.069-.174-.298-.018-.459.131-.608.134-.133.299-.347.448-.521.149-.173.199-.298.298-.497.099-.199.05-.373-.025-.522-.075-.149-.672-1.62-.921-2.219-.242-.582-.487-.503-.672-.513l-.572-.01c-.199 0-.522.075-.795.373-.273.298-1.043 1.02-1.043 2.487 0 1.467 1.068 2.885 1.217 3.084.149.199 2.1 3.206 5.086 4.494.711.307 1.265.49 1.697.627.713.227 1.362.195 1.876.118.572-.086 1.77-.723 2.02-1.422.249-.698.249-1.296.174-1.422-.075-.124-.273-.199-.572-.348z"/>
+  </svg>
+</a>
+<style>
+  /* Pulse ring animation on the WhatsApp button */
+  #wa-btn::after {
+    content: '';
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: rgba(37,211,102,0.4);
+    animation: waPulse 2s infinite;
+  }
+  @keyframes waPulse {
+    0%   { transform: scale(1);   opacity: 0.7; }
+    70%  { transform: scale(1.55); opacity: 0; }
+    100% { transform: scale(1.55); opacity: 0; }
+  }
+</style>
+
+</body></html>
